@@ -54,7 +54,7 @@ public class AppController {
 			final ModelMap model) 
 	{
 		model.addAttribute("loggedinuser", UtilSecurity.getPrincipal());
-		return "index";
+		return "dashboard";
 	}
 	
 	/**
