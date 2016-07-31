@@ -1,8 +1,10 @@
 com/websystique/springmvc/model/User.class
 com/websystique/springmvc/dao/AbstractDao.class
+com/websystique/springmvc/security/UtilSecurity.class
 com/websystique/springmvc/security/SecurityConfiguration.class
 com/websystique/springmvc/configuration/AppConfig.class
 com/websystique/springmvc/model/UserProfileType.class
+com/websystique/springmvc/controller/UserController.class
 com/websystique/springmvc/configuration/AppInitializer.class
 com/websystique/springmvc/controller/AppController.class
 com/websystique/springmvc/dao/UserProfileDaoImpl.class

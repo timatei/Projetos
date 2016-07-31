@@ -13,6 +13,7 @@
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/configuration/AppConfig.java
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/configuration/AppInitializer.java
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/service/UserProfileServiceImpl.java
+/home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/controller/UserController.java
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/service/UserServiceImpl.java
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/dao/AbstractDao.java
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/security/CustomUserDetailsService.java
@@ -20,3 +21,4 @@
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/model/UserProfileType.java
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/model/UserProfile.java
 /home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/model/User.java
+/home/izaias/workspace/MeuCaixa/src/main/java/com/websystique/springmvc/security/UtilSecurity.java
