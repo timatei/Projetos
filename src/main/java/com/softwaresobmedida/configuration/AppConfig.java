@@ -1,4 +1,4 @@
-package com.websystique.springmvc.configuration;
+package com.softwaresobmedida.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -15,12 +15,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import com.websystique.springmvc.converter.RoleToUserProfileConverter;
+import com.softwaresobmedida.converter.RoleToUserProfileConverter;
 
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.websystique.springmvc")
+@ComponentScan(basePackages = "com.softwaresobmedida")
 public class AppConfig extends WebMvcConfigurerAdapter{
 	
 	

@@ -1,4 +1,4 @@
-package com.websystique.springmvc.security;
+package com.softwaresobmedida.security;
 
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.core.Authentication;

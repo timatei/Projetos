@@ -1,4 +1,4 @@
-package com.websystique.springmvc.service;
+package com.softwaresobmedida.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.websystique.springmvc.dao.UserDao;
-import com.websystique.springmvc.model.User;
+import com.softwaresobmedida.dao.UserDao;
+import com.softwaresobmedida.model.User;
 
 
 @Service("userService")

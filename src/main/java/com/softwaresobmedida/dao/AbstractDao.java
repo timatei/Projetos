@@ -1,4 +1,4 @@
-package com.websystique.springmvc.dao;
+package com.softwaresobmedida.dao;
 
 import java.io.Serializable;
 

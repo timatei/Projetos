@@ -1,4 +1,4 @@
-package com.websystique.springmvc.controller;
+package com.softwaresobmedida.controller;
 
 import java.util.List;
 import java.util.Locale;
@@ -18,11 +18,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.websystique.springmvc.model.User;
-import com.websystique.springmvc.model.UserProfile;
-import com.websystique.springmvc.security.UtilSecurity;
-import com.websystique.springmvc.service.UserProfileService;
-import com.websystique.springmvc.service.UserService;
+import com.softwaresobmedida.model.User;
+import com.softwaresobmedida.model.UserProfile;
+import com.softwaresobmedida.security.UtilSecurity;
+import com.softwaresobmedida.service.UserProfileService;
+import com.softwaresobmedida.service.UserService;
 
 @Controller
 @RequestMapping("/user")

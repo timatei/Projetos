@@ -1,4 +1,4 @@
-package com.websystique.springmvc.dao;
+package com.softwaresobmedida.dao;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import com.websystique.springmvc.model.User;
+import com.softwaresobmedida.model.User;
 
 
 

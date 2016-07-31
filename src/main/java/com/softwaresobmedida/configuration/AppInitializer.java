@@ -1,4 +1,4 @@
-package com.websystique.springmvc.configuration;
+package com.softwaresobmedida.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

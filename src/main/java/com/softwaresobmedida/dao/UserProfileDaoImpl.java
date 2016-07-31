@@ -1,4 +1,4 @@
-package com.websystique.springmvc.dao;
+package com.softwaresobmedida.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import com.websystique.springmvc.model.UserProfile;
+import com.softwaresobmedida.model.UserProfile;
 
 
 

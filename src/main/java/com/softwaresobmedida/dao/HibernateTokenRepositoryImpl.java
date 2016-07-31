@@ -1,4 +1,4 @@
-package com.websystique.springmvc.dao;
+package com.softwaresobmedida.dao;
 
 import java.util.Date;
 
@@ -11,8 +11,8 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.websystique.springmvc.dao.AbstractDao;
-import com.websystique.springmvc.model.PersistentLogin;
+import com.softwaresobmedida.dao.AbstractDao;
+import com.softwaresobmedida.model.PersistentLogin;
 
 @Repository("tokenRepositoryDao")
 @Transactional

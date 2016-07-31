@@ -1,8 +1,8 @@
-package com.websystique.springmvc.service;
+package com.softwaresobmedida.service;
 
 import java.util.List;
 
-import com.websystique.springmvc.model.User;
+import com.softwaresobmedida.model.User;
 
 
 public interface UserService {

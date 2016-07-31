@@ -1,8 +1,8 @@
-package com.websystique.springmvc.dao;
+package com.softwaresobmedida.dao;
 
 import java.util.List;
 
-import com.websystique.springmvc.model.UserProfile;
+import com.softwaresobmedida.model.UserProfile;
 
 
 public interface UserProfileDao {

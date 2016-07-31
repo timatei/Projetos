@@ -1,4 +1,4 @@
-package com.websystique.springmvc.security;
+package com.softwaresobmedida.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +14,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.websystique.springmvc.model.User;
-import com.websystique.springmvc.model.UserProfile;
-import com.websystique.springmvc.service.UserService;
+import com.softwaresobmedida.model.User;
+import com.softwaresobmedida.model.UserProfile;
+import com.softwaresobmedida.service.UserService;
 
 
 @Service("customUserDetailsService")
