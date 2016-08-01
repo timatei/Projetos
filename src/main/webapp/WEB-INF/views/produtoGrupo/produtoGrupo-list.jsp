@@ -44,7 +44,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ProdutoGrupo</h1>
+                    <h1 class="page-header">Grupo de produto</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>            
@@ -53,7 +53,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Listagem de produtoGrupo
+                            Listagem de grupo de produto
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -76,8 +76,8 @@
                                     <thead>
 							      		<tr>
 									        <th>Descrição</th>
-									        <th>Des.Touch</th>
-									        <th>Ordem</th>
+									        <th width="80" style="text-align:center">Des.Touch</th>
+									        <th width="60" style="text-align:center">Ordem</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -85,8 +85,8 @@
 										<c:forEach items="${lista}" var="produtoGrupo">
 											<tr class="odd gradeX">
 												<td>${produtoGrupo.descricao}</td>
-												<td>${produtoGrupo.desativarTouch}</td>
-												<td>${produtoGrupo.ordem}</td>
+												<td width="80" style="text-align:center">${produtoGrupo.desativarTouch}</td>
+												<td width="60" style="text-align:center">${produtoGrupo.ordem}</td>
 												<td width="50" style="text-align:center">
 													<a href="<c:url value='/produtoGrupo/edit-${produtoGrupo.codProdutoGrupo}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 

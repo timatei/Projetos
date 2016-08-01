@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ProdutoGrupo</h1>
+                    <h1 class="page-header">Grupo de produto</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,7 +48,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de produtoGrupo
+                            Cadastro de grupo de produto
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="produtoGrupo" class="form form-horizontal has-validation-callback">
