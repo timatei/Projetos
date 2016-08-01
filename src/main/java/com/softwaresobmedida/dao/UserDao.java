@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.softwaresobmedida.model.User;
 
-
 public interface UserDao {
 
 	User findById(int id);
@@ -18,4 +17,3 @@ public interface UserDao {
 	List<User> findAllUsers();
 
 }
-

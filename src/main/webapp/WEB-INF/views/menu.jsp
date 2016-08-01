@@ -58,83 +58,107 @@
                             <a href="<c:url value='/user/list'/>"><i class="fa fa-table fa-fw"></i> Usuário</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Parametro Geral (Empresa)</a>
+                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-edit fa-fw"></i> Pessoa</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Grupo de Produto</a>
+                            <a href="<c:url value='/pedVenda/list'/>"><i class="fa fa-edit fa-fw"></i> Venda Rápida</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> SubGrupo de Produto</a>
+                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-edit fa-fw"></i> Vendedor</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Unidade de Produto</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Produto</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Cliente</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Garçon</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Vendedor</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Controle/Mesas</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Moeda</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forma de Pagamento</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Fornecedor</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Personalização de Produto</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Ajuste de Estoque</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Nota Fiscal de Compra</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Venda Rápida</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Lançamento de Mesa</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Visualização de Mesa</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Configuração</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Impressão</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Abertura de Caixa</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Parametro Restaurante</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Parametro de Venda</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Gráficos<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Catalogo<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="flot.html">Flot Charts</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">Morris.js Charts</a>
-                                </li>
+		                        <li>
+		                            <a href="<c:url value='/produtoGrupo/list'/>"><i class="fa fa-edit fa-fw"></i> Grupo de Produto</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/produtoGrupoSubGrp/list'/>"><i class="fa fa-edit fa-fw"></i> SubGrupo de Produto</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/produtoUnidade/list'/>"><i class="fa fa-edit fa-fw"></i> Unidade de Produto</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/produto/list'/>"><i class="fa fa-edit fa-fw"></i> Produto</a>
+		                        </li>
+		                        <li>
+		                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Personalização de Produto</a>
+		                        </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Financeiro<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+		                        <li>
+		                            <a href="<c:url value='/moeda/list'/>"><i class="fa fa-edit fa-fw"></i> Moeda</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/formapagamento/list'/>"><i class="fa fa-edit fa-fw"></i> Forma de Pagamento</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/contas/list'/>"><i class="fa fa-edit fa-fw"></i> Contas</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/banco/list'/>"><i class="fa fa-edit fa-fw"></i> Banco</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/centCusto/list'/>"><i class="fa fa-edit fa-fw"></i> Centro de Custo</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/caixaAbertura/list'/>"><i class="fa fa-edit fa-fw"></i> Abertura de Caixa</a>
+		                        </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Restaurante<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+		                        <li>
+		                            <a href="<c:url value='/resGarcon/list'/>"><i class="fa fa-edit fa-fw"></i> Garçon</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/resControle/list'/>"><i class="fa fa-edit fa-fw"></i> Controle/Mesas</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/resPedido/list'/>"><i class="fa fa-edit fa-fw"></i> Lançamento de Mesa</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/resPedido/list'/>"><i class="fa fa-edit fa-fw"></i> Visualização de Mesa</a>
+		                        </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Compra<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+		                        <li>
+		                            <a href="<c:url value='/ajusteEstoque/list'/>"><i class="fa fa-edit fa-fw"></i> Ajuste de Estoque</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/nfCompra/list'/>"><i class="fa fa-edit fa-fw"></i> Nota Fiscal de Compra</a>
+		                        </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Parametro<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+		                        <li>
+		                            <a href="<c:url value='/configuracaoGeral/list'/>"><i class="fa fa-edit fa-fw"></i> Configuração</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/impressao/list'/>"><i class="fa fa-edit fa-fw"></i> Impressão</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/parGeral/list'/>"><i class="fa fa-edit fa-fw"></i> Parametro Geral (Empresa)</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/parRestaurante/list'/>"><i class="fa fa-edit fa-fw"></i> Parametro Restaurante</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/parVenda/list'/>"><i class="fa fa-edit fa-fw"></i> Parametro de Venda</a>
+		                        </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

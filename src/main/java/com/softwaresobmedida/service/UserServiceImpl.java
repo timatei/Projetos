@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.softwaresobmedida.dao.UserDao;
 import com.softwaresobmedida.model.User;
 
-
 @Service("userService")
 @Transactional
 public class UserServiceImpl implements UserService{

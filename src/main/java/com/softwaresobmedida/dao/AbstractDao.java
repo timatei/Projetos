@@ -34,7 +34,7 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 		getSession().persist(entity);
 	}
 
-	public void update(T entity) {
+	public void persistUpdate(T entity) {
 		getSession().update(entity);
 	}
 
