@@ -44,7 +44,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ProdutoUnidade</h1>
+                    <h1 class="page-header">Unidade</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>            
@@ -53,7 +53,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Listagem de produtoUnidade
+                            Listagem de unidade
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -75,10 +75,8 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>Descricao</th>
-									        <th>Sigla</th>
-									        <th>Modificacao</th>
-									        <th>Aux</th>
+									        <th>Descrição</th>
+									        <th width="60" style="text-align:center">Sigla</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -86,14 +84,12 @@
 										<c:forEach items="${lista}" var="produtoUnidade">
 											<tr class="odd gradeX">
 												<td>${produtoUnidade.descricao}</td>
-												<td>${produtoUnidade.sigla}</td>
-												<td>${produtoUnidade.modificacao}</td>
-												<td>${produtoUnidade.aux}</td>
+												<td width="60" style="text-align:center">${produtoUnidade.sigla}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/produtoUnidade/edit-${produtoUnidade.codprodutounidade}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/produtoUnidade/edit-${produtoUnidade.codProdutoUnidade}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/produtoUnidade/delete-${produtoUnidade.codprodutounidade}' />" 
+												    	data-href="<c:url value='/produtoUnidade/delete-${produtoUnidade.codProdutoUnidade}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>

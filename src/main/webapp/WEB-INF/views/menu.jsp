@@ -58,13 +58,13 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Catálogo<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
 		                        <li>
-		                            <a href="<c:url value='/produtoGrupo/list'/>"><i class="fa fa-edit fa-fw"></i> Grupo de Produto</a>
+		                            <a href="<c:url value='/produtoGrupo/list'/>"><i class="fa fa-edit fa-fw"></i> Grupo</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/produtoGrupoSubGrp/list'/>"><i class="fa fa-edit fa-fw"></i> SubGrupo de Produto</a>
+		                            <a href="<c:url value='/produtoGrupoSubGrp/list'/>"><i class="fa fa-edit fa-fw"></i> SubGrupo</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/produtoUnidade/list'/>"><i class="fa fa-edit fa-fw"></i> Unidade de Produto</a>
+		                            <a href="<c:url value='/produtoUnidade/list'/>"><i class="fa fa-edit fa-fw"></i> Unidade</a>
 		                        </li>
 		                        <li>
 		                            <a href="<c:url value='/produto/list'/>"><i class="fa fa-edit fa-fw"></i> Produto</a>

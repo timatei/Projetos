@@ -44,7 +44,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Grupo de produto</h1>
+                    <h1 class="page-header">Grupo</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>            
@@ -53,7 +53,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Listagem de grupo de produto
+                            Listagem de grupo
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
