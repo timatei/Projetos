@@ -9,14 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @DynamicInsert
@@ -25,11 +24,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @SequenceGenerator(name = "INC_PRODUTO_GRUPO_SUBGRP", sequenceName = "GEN_PRODUTO_GRUPO_SUBGRP")
 
 @XmlAccessorType(XmlAccessType.NONE)
-@XmlRootElement(name = "produtoGrupoSubgrp") 
+@XmlRootElement(name = "produtoGrupoSubGrp") 
 public class ProdutoGrupoSubGrp implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static String CAMPO_CHAVE = "id";
+	public static String CAMPO_CHAVE = "codProdutoGrupoSubGrp";
 
 	public ProdutoGrupoSubGrp() {	
 	}
@@ -37,31 +36,31 @@ public class ProdutoGrupoSubGrp implements Serializable {
 	@Id
 	@Column(name="CODPRODUTOGRUPOSUBGRP", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_PRODUTO_GRUPO_SUBGRP")
-	@XmlElement(name = "codprodutogruposubgrp")
-	private Integer codprodutogruposubgrp;
+	@XmlElement(name = "codProdutoGrupoSubGrp")
+	private Integer codProdutoGrupoSubGrp;
 
-	public void setCodprodutogruposubgrp(Integer codprodutogruposubgrp)
+	public void setCodProdutoGrupoSubGrp(Integer codProdutoGrupoSubGrp)
 	{
-		this.codprodutogruposubgrp = codprodutogruposubgrp;
+		this.codProdutoGrupoSubGrp = codProdutoGrupoSubGrp;
 	}
 
-	public Integer getCodprodutogruposubgrp()
+	public Integer getCodProdutoGrupoSubGrp()
 	{
-		return codprodutogruposubgrp;
+		return codProdutoGrupoSubGrp;
 	}
 
 	@Column(name="CODPRODUTOGRUPO", nullable =  false , length = 11)
-	@XmlElement(name = "codprodutogrupo")
-	private Integer codprodutogrupo;
+	@XmlElement(name = "codProdutoGrupo")
+	private Integer codProdutoGrupo;
 
-	public void setCodprodutogrupo(Integer codprodutogrupo)
+	public void setCodProdutoGrupo(Integer codProdutoGrupo)
 	{
-		this.codprodutogrupo = codprodutogrupo;
+		this.codProdutoGrupo = codProdutoGrupo;
 	}
 
-	public Integer getCodprodutogrupo()
+	public Integer getCodProdutoGrupo()
 	{
-		return codprodutogrupo;
+		return codProdutoGrupo;
 	}
 
 	@Column(name="PROGS_DESCRICAO", nullable =  false , length = 60)
@@ -87,9 +86,7 @@ public class ProdutoGrupoSubGrp implements Serializable {
 		this.ordem = ordem;
 	}
 
-	public Integer getOrdem()
-	{
+	public Integer getOrdem() {
 		return ordem;
 	}
-
 }

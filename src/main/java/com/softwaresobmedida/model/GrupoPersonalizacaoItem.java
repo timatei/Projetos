@@ -2,21 +2,25 @@ package com.softwaresobmedida.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @DynamicInsert
@@ -29,7 +33,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class GrupoPersonalizacaoItem implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static String CAMPO_CHAVE = "id";
+	public static String CAMPO_CHAVE = "codGrupoPersonalizacaoItem";
 
 	public GrupoPersonalizacaoItem() {	
 	}
@@ -37,59 +41,52 @@ public class GrupoPersonalizacaoItem implements Serializable {
 	@Id
 	@Column(name="CODGRUPOPERSONALIZACAOITEM", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_GRUPO_PERSONALIZACAO_ITEM")
-	@XmlElement(name = "codgrupopersonalizacaoitem")
-	private Integer codgrupopersonalizacaoitem;
+	@XmlElement(name = "codGrupoPersonalizacaoItem")
+	private Integer codGrupoPersonalizacaoItem;
 
-	public void setCodgrupopersonalizacaoitem(Integer codgrupopersonalizacaoitem)
+	public void setCodGrupoPersonalizacaoItem(Integer codGrupoPersonalizacaoItem)
 	{
-		this.codgrupopersonalizacaoitem = codgrupopersonalizacaoitem;
+		this.codGrupoPersonalizacaoItem = codGrupoPersonalizacaoItem;
 	}
 
-	public Integer getCodgrupopersonalizacaoitem()
+	public Integer getCodGrupoPersonalizacaoItem()
 	{
-		return codgrupopersonalizacaoitem;
+		return codGrupoPersonalizacaoItem;
 	}
 
-	@Column(name="CODGRUPOPERSONALIZACAO", nullable =  false , length = 11)
-	@XmlElement(name = "codgrupopersonalizacao")
-	private Integer codgrupopersonalizacao;
-
-	public void setCodgrupopersonalizacao(Integer codgrupopersonalizacao)
-	{
-		this.codgrupopersonalizacao = codgrupopersonalizacao;
+	@ManyToOne(fetch=FetchType.EAGER)  
+	@JoinColumn(name="CODGRUPOPERSONALIZACAO")
+	private GrupoPersonalizacao grupoPersonalizacao;
+	
+	public void setGrupoPersonalizacao(GrupoPersonalizacao grupoPersonalizacao) {
+		this.grupoPersonalizacao = grupoPersonalizacao;
+	}
+	
+	public GrupoPersonalizacao getGrupoPersonalizacao() {
+		return grupoPersonalizacao;
 	}
 
-	public Integer getCodgrupopersonalizacao()
-	{
-		return codgrupopersonalizacao;
+	@OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name="CODPRODUTO")
+	@XmlElement(name = "produto")
+	private Produto produto;
+
+	public Produto getProduto() {
+		return produto;
 	}
 
-	@Column(name="CODPRODUTO", nullable =  false , length = 11)
-	@XmlElement(name = "codproduto")
-	private Integer codproduto;
-
-	public void setCodproduto(Integer codproduto)
-	{
-		this.codproduto = codproduto;
+	public void setProduto(Produto produto) {
+		this.produto = produto;
 	}
 
-	public Integer getCodproduto()
-	{
-		return codproduto;
+	@Column(name="CODPESQUISA", nullable = true, length = 20)
+	private String codPesquisa;
+	
+	public String getCodPesquisa() {
+		return codPesquisa;
 	}
-
-	@Column(name="CODPESQUISA", nullable =  true , length = 20)
-	@XmlElement(name = "codpesquisa")
-	private String codpesquisa;
-
-	public void setCodpesquisa(String codpesquisa)
-	{
-		this.codpesquisa = codpesquisa;
+	
+	public void setCodPesquisa(String codPesquisa) {
+		this.codPesquisa = codPesquisa;
 	}
-
-	public String getCodpesquisa()
-	{
-		return codpesquisa;
-	}
-
 }

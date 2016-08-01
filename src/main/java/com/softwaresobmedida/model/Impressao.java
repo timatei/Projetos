@@ -1,6 +1,7 @@
 package com.softwaresobmedida.model;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,183 +10,133 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import com.softwaresobmedida.util.TimestampAdapter;
 
 @Entity
 @DynamicInsert
 @DynamicUpdate
-@Table(name = "IMPRESSAO")
+@Table(name="IMPRESSAO")
 @SequenceGenerator(name = "INC_IMPRESSAO", sequenceName = "GEN_IMPRESSAO")
-
-@XmlAccessorType(XmlAccessType.NONE)
-@XmlRootElement(name = "impressao") 
 public class Impressao implements Serializable {
 	private static final long serialVersionUID = 1L;
-
-	public static String CAMPO_CHAVE = "id";
-
-	public Impressao() {	
-	}
-
+	
+	public static String CAMPO_CHAVE = "codImpressao";
+	
 	@Id
-	@Column(name="CODIMPRESSAO", nullable =  false , length = 11)
+	@Column(name="CODIMPRESSAO", nullable = false)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_IMPRESSAO")
-	@XmlElement(name = "codimpressao")
-	private Integer codimpressao;
+	@XmlElement(name = "CODIMPRESSAO")
+	private Integer codImpressao;
 
-	public void setCodimpressao(Integer codimpressao)
-	{
-		this.codimpressao = codimpressao;
+	@Column(name="IMP_DATAHORA", columnDefinition = "TIMESTAMP")
+	@XmlElement(name = "IMP_DATAHORA")
+    @XmlJavaTypeAdapter(TimestampAdapter.class)	
+	private Timestamp impDataHora = new Timestamp(System.currentTimeMillis());
+	
+	@Column(name="IMP_USUARIO", nullable = false, length = 20)
+	@XmlElement(name = "IMP_USUARIO")
+	private String impUsuario;
+	
+	@Column(name="IMP_CENTRALIZADOR", nullable = false, length = 20)
+	@XmlElement(name = "IMP_CENTRALIZADOR")
+	private String impCentralizador = "COZINHA";
+	
+	@Column(name="IMP_FINALIZADO", nullable = false, length = 1)
+	@XmlElement(name = "IMP_FINALIZADO")
+	private String impFinalizado = "N";
+	
+	@Column(name="IMP_TEXTO", nullable = false, columnDefinition = "BLOB SUB_TYPE 2 SEGMENT SIZE 1")
+	@XmlElement(name = "IMP_TEXTO")	
+	private String impTexto;
+	
+	@Column(name="CODCONTROLE", nullable =  false , length = 11)
+	@XmlElement(name = "codControle")
+	private Integer codControle;
+	
+	@Column(name="IMP_TITULO", nullable = false, length = 50)
+	@XmlElement(name = "IMP_TITULO")
+	private String impTitulo;
+
+	@Column(name="IMP_CANCELADO", nullable = false, length = 1)
+	@XmlElement(name = "IMP_CANCELADO")
+	private String impCancelado = "N";
+	
+	public Integer getCodImpressao() {
+		return codImpressao;
+	}
+	
+	public void setCodImpressao(Integer codImpressao) {
+		this.codImpressao = codImpressao;
+	}
+	
+	public Timestamp getImpDataHora() {
+		return impDataHora;
 	}
 
-	public Integer getCodimpressao()
-	{
-		return codimpressao;
+	public void setImpDataHora(Timestamp impDataHora) {
+		this.impDataHora = impDataHora;
 	}
 
-	@Column(name="IMP_DATAHORA", nullable =  false , length = 19)
-	@XmlElement(name = "datahora")
-	private java.sql.Timestamp datahora;
-
-	public void setDatahora(java.sql.Timestamp datahora)
-	{
-		this.datahora = datahora;
+	public String getImpUsuario() {
+		return impUsuario;
 	}
 
-	public java.sql.Timestamp getDatahora()
-	{
-		return datahora;
+	public void setImpUsuario(String impUsuario) {
+		this.impUsuario = impUsuario;
 	}
 
-	@Column(name="IMP_USUARIO", nullable =  false , length = 20)
-	@XmlElement(name = "usuario")
-	private String usuario;
-
-	public void setUsuario(String usuario)
-	{
-		this.usuario = usuario;
+	public String getImpCentralizador() {
+		return impCentralizador;
 	}
 
-	public String getUsuario()
-	{
-		return usuario;
+	public void setImpCentralizador(String impCentralizador) {
+		this.impCentralizador = impCentralizador;
 	}
 
-	@Column(name="IMP_CENTRALIZADOR", nullable =  false , length = 25)
-	@XmlElement(name = "centralizador")
-	private String centralizador;
-
-	public void setCentralizador(String centralizador)
-	{
-		this.centralizador = centralizador;
+	public String getImpTitulo() {
+		return impTitulo;
 	}
 
-	public String getCentralizador()
-	{
-		return centralizador;
+	public void setImpTitulo(String impTitulo) {
+		this.impTitulo = impTitulo;
 	}
 
-	@Column(name="IMP_FINALIZADO", nullable =  false , length = 1)
-	@XmlElement(name = "finalizado")
-	private String finalizado;
-
-	public void setFinalizado(String finalizado)
-	{
-		this.finalizado = finalizado;
+	public String getImpTexto() {
+		return impTexto;
 	}
 
-	public String getFinalizado()
-	{
-		return finalizado;
+	public void setImpTexto(String impTexto) {
+		this.impTexto = impTexto;
+	}
+	
+	public String getImpFinalizado() {
+		return impFinalizado;
+	}
+	
+	public void setImpFinalizado(String impFinalizado) {
+		this.impFinalizado = impFinalizado;
+	}
+	
+	public void setImpCancelado(String impCancelado) {
+		this.impCancelado = impCancelado;
+	}
+	
+	public String getImpCancelado() {
+		return impCancelado;
 	}
 
-	public void setFinalizadoBoolean(Boolean value)
-	{
-		if (value) {
-			this.finalizado = "S";
-		}
-		else {
-			this.finalizado = "N";
-		}
+	public void setCodControle(Integer codControle) {
+		this.codControle = codControle;
 	}
-	public Boolean getFinalizadoBoolean()
-	{
-		return ((this.finalizado != null)&&(this.finalizado.equalsIgnoreCase("S")));
+	
+	public Integer getCodControle() {
+		return codControle;
 	}
-	@Column(name="IMP_TEXTO", nullable =  true , length = 0)
-	@XmlElement(name = "texto")
-	private String texto;
-
-	public void setTexto(String texto)
-	{
-		this.texto = texto;
-	}
-
-	public String getTexto()
-	{
-		return texto;
-	}
-
-	@Column(name="CODCONTROLE", nullable =  true , length = 11)
-	@XmlElement(name = "codcontrole")
-	private Integer codcontrole;
-
-	public void setCodcontrole(Integer codcontrole)
-	{
-		this.codcontrole = codcontrole;
-	}
-
-	public Integer getCodcontrole()
-	{
-		return codcontrole;
-	}
-
-	@Column(name="IMP_TITULO", nullable =  true , length = 40)
-	@XmlElement(name = "titulo")
-	private String titulo;
-
-	public void setTitulo(String titulo)
-	{
-		this.titulo = titulo;
-	}
-
-	public String getTitulo()
-	{
-		return titulo;
-	}
-
-	@Column(name="IMP_CANCELADO", nullable =  false , length = 1)
-	@XmlElement(name = "cancelado")
-	private String cancelado;
-
-	public void setCancelado(String cancelado)
-	{
-		this.cancelado = cancelado;
-	}
-
-	public String getCancelado()
-	{
-		return cancelado;
-	}
-
-	public void setCanceladoBoolean(Boolean value)
-	{
-		if (value) {
-			this.cancelado = "S";
-		}
-		else {
-			this.cancelado = "N";
-		}
-	}
-	public Boolean getCanceladoBoolean()
-	{
-		return ((this.cancelado != null)&&(this.cancelado.equalsIgnoreCase("S")));
-	}
+	
 }

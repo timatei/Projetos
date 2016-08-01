@@ -9,14 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @DynamicInsert
@@ -29,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ParRestaurante implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static String CAMPO_CHAVE = "id";
+	public static String CAMPO_CHAVE = "codParRestaurante";
 
 	public ParRestaurante() {	
 	}
@@ -37,17 +36,17 @@ public class ParRestaurante implements Serializable {
 	@Id
 	@Column(name="CODPARRESTAURANTE", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_PAR_RESTAURANTE")
-	@XmlElement(name = "codparrestaurante")
-	private Integer codparrestaurante;
+	@XmlElement(name = "codParRestaurante")
+	private Integer codParRestaurante;
 
-	public void setCodparrestaurante(Integer codparrestaurante)
+	public void setCodParRestaurante(Integer codParRestaurante)
 	{
-		this.codparrestaurante = codparrestaurante;
+		this.codParRestaurante = codParRestaurante;
 	}
 
-	public Integer getCodparrestaurante()
+	public Integer getCodParRestaurante()
 	{
-		return codparrestaurante;
+		return codParRestaurante;
 	}
 
 	@Column(name="PARR_CONTROLE_NOME", nullable =  true , length = 20)
@@ -296,5 +295,4 @@ public class ParRestaurante implements Serializable {
 	{
 		return impPizza;
 	}
-
 }

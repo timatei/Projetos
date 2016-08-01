@@ -55,19 +55,7 @@
                             <a href="<c:url value='/index'/>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="<c:url value='/user/list'/>"><i class="fa fa-table fa-fw"></i> Usuário</a>
-                        </li>
-                        <li>
-                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-edit fa-fw"></i> Pessoa</a>
-                        </li>
-                        <li>
-                            <a href="<c:url value='/pedVenda/list'/>"><i class="fa fa-edit fa-fw"></i> Venda Rápida</a>
-                        </li>
-                        <li>
-                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-edit fa-fw"></i> Vendedor</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Catalogo<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Catálogo<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
 		                        <li>
 		                            <a href="<c:url value='/produtoGrupo/list'/>"><i class="fa fa-edit fa-fw"></i> Grupo de Produto</a>
@@ -82,10 +70,22 @@
 		                            <a href="<c:url value='/produto/list'/>"><i class="fa fa-edit fa-fw"></i> Produto</a>
 		                        </li>
 		                        <li>
-		                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Personalização de Produto</a>
+		                            <a href="<c:url value='/produtoPersonalizacao/list'/>"><i class="fa fa-edit fa-fw"></i> Produto Personalização</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/grupoPersonalizacao/list'/>"><i class="fa fa-edit fa-fw"></i> Grupo Personalização</a>
 		                        </li>
                             </ul>
                             <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-edit fa-fw"></i> Pessoa</a>
+                        </li>
+                        <li>
+                            <a href="<c:url value='/pedVenda/list'/>"><i class="fa fa-edit fa-fw"></i> Venda Rápida</a>
+                        </li>
+                        <li>
+                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-edit fa-fw"></i> Vendedor</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Financeiro<span class="fa arrow"></span></a>
@@ -123,9 +123,6 @@
 		                        <li>
 		                            <a href="<c:url value='/resPedido/list'/>"><i class="fa fa-edit fa-fw"></i> Lançamento de Mesa</a>
 		                        </li>
-		                        <li>
-		                            <a href="<c:url value='/resPedido/list'/>"><i class="fa fa-edit fa-fw"></i> Visualização de Mesa</a>
-		                        </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -142,8 +139,11 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Parametro<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Parâmetro de sistema<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
+		                        <li>
+		                            <a href="<c:url value='/user/list'/>"><i class="fa fa-table fa-fw"></i> Usuário</a>
+		                        </li>
 		                        <li>
 		                            <a href="<c:url value='/configuracaoGeral/list'/>"><i class="fa fa-edit fa-fw"></i> Configuração</a>
 		                        </li>
@@ -151,10 +151,10 @@
 		                            <a href="<c:url value='/impressao/list'/>"><i class="fa fa-edit fa-fw"></i> Impressão</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/parGeral/list'/>"><i class="fa fa-edit fa-fw"></i> Parametro Geral (Empresa)</a>
+		                            <a href="<c:url value='/parGeral/list'/>"><i class="fa fa-edit fa-fw"></i> Parâmetro Geral (Empresa)</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/parRestaurante/list'/>"><i class="fa fa-edit fa-fw"></i> Parametro Restaurante</a>
+		                            <a href="<c:url value='/parRestaurante/list'/>"><i class="fa fa-edit fa-fw"></i> Parâmetro Restaurante</a>
 		                        </li>
 		                        <li>
 		                            <a href="<c:url value='/parVenda/list'/>"><i class="fa fa-edit fa-fw"></i> Parametro de Venda</a>

@@ -4,39 +4,33 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 @Entity
 @DynamicInsert
 @DynamicUpdate
 @Table(name = "CONFIGURACAO_GERAL")
-@SequenceGenerator(name = "INC_CONFIGURACAO_GERAL", sequenceName = "GEN_CONFIGURACAO_GERAL")
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "configuracaoGeral") 
 public class ConfiguracaoGeral implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static String CAMPO_CHAVE = "id";
+	public static String CAMPO_CHAVE = "chave";
 
 	public ConfiguracaoGeral() {	
 	}
 
 	@Id
 	@Column(name="CONF_CHAVE", nullable =  false , length = 15)
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_CONFIGURACAO_GERAL")
 	@XmlElement(name = "chave")
 	private String chave;
 
@@ -119,19 +113,4 @@ public class ConfiguracaoGeral implements Serializable {
 	{
 		return md5;
 	}
-
-	@Column(name="SSM_MODIFICACAO", nullable =  true , length = 19)
-	@XmlElement(name = "modificacao")
-	private java.sql.Timestamp modificacao;
-
-	public void setModificacao(java.sql.Timestamp modificacao)
-	{
-		this.modificacao = modificacao;
-	}
-
-	public java.sql.Timestamp getModificacao()
-	{
-		return modificacao;
-	}
-
 }

@@ -9,14 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @DynamicInsert
@@ -29,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ProdutoUnidade implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static String CAMPO_CHAVE = "id";
+	public static String CAMPO_CHAVE = "codProdutoUnidade";
 
 	public ProdutoUnidade() {	
 	}
@@ -37,19 +36,17 @@ public class ProdutoUnidade implements Serializable {
 	@Id
 	@Column(name="CODPRODUTOUNIDADE", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_PRODUTO_UNIDADE")
-	@XmlElement(name = "codprodutounidade")
-	private Integer codprodutounidade;
-
-	public void setCodprodutounidade(Integer codprodutounidade)
-	{
-		this.codprodutounidade = codprodutounidade;
+	@XmlElement(name = "codProdutoUnidade")
+	private Integer codProdutoUnidade;
+	
+	public Integer getCodProdutoUnidade() {
+		return codProdutoUnidade;
 	}
-
-	public Integer getCodprodutounidade()
-	{
-		return codprodutounidade;
+	
+	public void setCodProdutoUnidade(Integer codProdutoUnidade) {
+		this.codProdutoUnidade = codProdutoUnidade;
 	}
-
+	
 	@Column(name="PROU_DESCRICAO", nullable =  false , length = 20)
 	@XmlElement(name = "descricao")
 	private String descricao;
@@ -77,46 +74,26 @@ public class ProdutoUnidade implements Serializable {
 	{
 		return sigla;
 	}
-
-	@Column(name="SSM_MODIFICACAO", nullable =  true , length = 19)
-	@XmlElement(name = "modificacao")
-	private java.sql.Timestamp modificacao;
-
-	public void setModificacao(java.sql.Timestamp modificacao)
-	{
-		this.modificacao = modificacao;
+	
+	// METODO IMPORTANTE PARA COMPARAR OBJETOS
+	@Override  
+	public boolean equals(Object obj){  
+		if (this == obj)  
+			return true;  
+		if (obj == null)  
+			return false;  
+		if (!(obj instanceof ProdutoUnidade)) //<<<<-------- MUDAR A CLASSE AQUI  
+			return false;  
+		ProdutoUnidade other = (ProdutoUnidade) obj;   //<<<<-------- MUDAR A CLASSE AQUI
+		if (codProdutoUnidade == null){   //<<<<-------- MUDAR A CAMPO AQUI
+			if (other.codProdutoUnidade != null)  
+				return false;  
+		} else if (!codProdutoUnidade.equals(other.codProdutoUnidade))   //<<<<-------- MUDAR A CAMPO AQUI
+			return false;  
+		return true;  
 	}
-
-	public java.sql.Timestamp getModificacao()
-	{
-		return modificacao;
-	}
-
-	@Column(name="AUX", nullable =  true , length = 1)
-	@XmlElement(name = "aux")
-	private String aux;
-
-	public void setAux(String aux)
-	{
-		this.aux = aux;
-	}
-
-	public String getAux()
-	{
-		return aux;
-	}
-
-	public void setAuxBoolean(Boolean value)
-	{
-		if (value) {
-			this.aux = "S";
-		}
-		else {
-			this.aux = "N";
-		}
-	}
-	public Boolean getAuxBoolean()
-	{
-		return ((this.aux != null)&&(this.aux.equalsIgnoreCase("S")));
-	}
+	
+	public int hashCode() {
+		return toString().hashCode();
+	}	
 }

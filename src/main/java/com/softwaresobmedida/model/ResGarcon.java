@@ -9,14 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @DynamicInsert
@@ -29,25 +28,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ResGarcon implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static String CAMPO_CHAVE = "id";
+	public static String CAMPO_CHAVE = "codGarcon";
 
 	public ResGarcon() {	
 	}
 
 	@Id
-	@Column(name="CODGARCON", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_RES_GARCON")
-	@XmlElement(name = "codgarcon")
-	private Integer codgarcon;
 
-	public void setCodgarcon(Integer codgarcon)
-	{
-		this.codgarcon = codgarcon;
+	@Column(name="CODGARCON", nullable =  false , length = 11)
+	@XmlElement(name = "codGarcon")
+	private Integer codGarcon;
+	
+	public void setCodGarcon(Integer codGarcon) {
+		this.codGarcon = codGarcon;
 	}
-
-	public Integer getCodgarcon()
-	{
-		return codgarcon;
+	
+	public Integer getCodGarcon() {
+		return codGarcon;
 	}
 
 	@Column(name="GAR_NOME", nullable =  false , length = 60)
@@ -65,7 +63,6 @@ public class ResGarcon implements Serializable {
 	}
 
 	@Column(name="GAR_SENHA", nullable =  true , length = 20)
-	@XmlElement(name = "senha")
 	private String senha;
 
 	public void setSenha(String senha)
@@ -104,19 +101,5 @@ public class ResGarcon implements Serializable {
 	public String getEntregador()
 	{
 		return entregador;
-	}
-
-	public void setEntregadorBoolean(Boolean value)
-	{
-		if (value) {
-			this.entregador = "S";
-		}
-		else {
-			this.entregador = "N";
-		}
-	}
-	public Boolean getEntregadorBoolean()
-	{
-		return ((this.entregador != null)&&(this.entregador.equalsIgnoreCase("S")));
 	}
 }

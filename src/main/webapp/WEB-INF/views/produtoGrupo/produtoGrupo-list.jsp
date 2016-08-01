@@ -75,11 +75,9 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>Descricao</th>
-									        <th>IpiPadrao</th>
-									        <th>IcmsPadrao</th>
-									        <th>Grau1</th>
-									        <th>Grau2</th>
+									        <th>Descrição</th>
+									        <th>Des.Touch</th>
+									        <th>Ordem</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -87,15 +85,13 @@
 										<c:forEach items="${lista}" var="produtoGrupo">
 											<tr class="odd gradeX">
 												<td>${produtoGrupo.descricao}</td>
-												<td>${produtoGrupo.ipiPadrao}</td>
-												<td>${produtoGrupo.icmsPadrao}</td>
-												<td>${produtoGrupo.grau1}</td>
-												<td>${produtoGrupo.grau2}</td>
+												<td>${produtoGrupo.desativarTouch}</td>
+												<td>${produtoGrupo.ordem}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/produtoGrupo/edit-${produtoGrupo.codprodutogrupo}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/produtoGrupo/edit-${produtoGrupo.codProdutoGrupo}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/produtoGrupo/delete-${produtoGrupo.codprodutogrupo}' />" 
+												    	data-href="<c:url value='/produtoGrupo/delete-${produtoGrupo.codProdutoGrupo}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>
