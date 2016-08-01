@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ProdutoGrupoSubgrp</h1>
+                    <h1 class="page-header">SubGrupo de produto</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,24 +48,24 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de produtoGrupoSubgrp
+                            Cadastro de subgrupo de produto
                         </div>
                         <div class="panel-body">
-                            <form:form method="POST" modelAttribute="produtoGrupoSubgrp" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codprodutogruposubgrp" id="codprodutogruposubgrp"/>
+                            <form:form method="POST" modelAttribute="produtoGrupoSubGrp" class="form form-horizontal has-validation-callback">
+                                <form:input type="hidden" path="codProdutoGrupoSubGrp" id="codProdutoGrupoSubGrp"/>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Codprodutogrupo:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Grupo:</label>
 									<div class="col-sm-8">
-										<form:input type="text" path="codprodutogrupo" id="codprodutogrupo" class="form-control has-suggestions"/>
+										<form:input type="text" path="codProdutoGrupo" id="codProdutoGrupo" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
-	                                        <form:errors path="codprodutogrupo" class="label label-danger"/>
+	                                        <form:errors path="codProdutoGrupo" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Descricao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Descrição:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="descricao" id="descricao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">

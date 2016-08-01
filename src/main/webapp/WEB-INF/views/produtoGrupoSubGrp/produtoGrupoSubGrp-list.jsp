@@ -44,7 +44,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ProdutoGrupoSubgrp</h1>
+                    <h1 class="page-header">SubGrupo de produto</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>            
@@ -53,7 +53,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Listagem de produtoGrupoSubgrp
+                            Listagem de subgrupo de produto
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -75,23 +75,23 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>Codprodutogrupo</th>
-									        <th>Descricao</th>
-									        <th>Ordem</th>
+									        <th>Grupo</th>
+									        <th>Descrição</th>
+									        <th width="60" style="text-align:center">Ordem</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
                                     <tbody>
 										<c:forEach items="${lista}" var="produtoGrupoSubgrp">
 											<tr class="odd gradeX">
-												<td>${produtoGrupoSubgrp.codprodutogrupo}</td>
+												<td>${produtoGrupoSubgrp.codProdutoGrupo}</td>
 												<td>${produtoGrupoSubgrp.descricao}</td>
-												<td>${produtoGrupoSubgrp.ordem}</td>
+												<td width="60" style="text-align:center">${produtoGrupoSubgrp.ordem}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/produtoGrupoSubgrp/edit-${produtoGrupoSubgrp.codprodutogruposubgrp}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/produtoGrupoSubGrp/edit-${produtoGrupoSubgrp.codProdutoGrupoSubGrp}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/produtoGrupoSubgrp/delete-${produtoGrupoSubgrp.codprodutogruposubgrp}' />" 
+												    	data-href="<c:url value='/produtoGrupoSubGrp/delete-${produtoGrupoSubgrp.codProdutoGrupoSubGrp}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>
