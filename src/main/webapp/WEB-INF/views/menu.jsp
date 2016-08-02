@@ -67,7 +67,7 @@
 		                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-child fa-fw"></i> Vendedor</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/resGarcon/list'/>"><i class="fa fa-steam fa-fw"></i> Garçom</a>
+		                            <a href="<c:url value='/resGarcom/list'/>"><i class="fa fa-steam fa-fw"></i> Garçom</a>
 		                        </li>
 		                        <li>
 		                            <a href="<c:url value='/resControle/list'/>"><i class="fa fa-tasks fa-fw"></i> Mesa</a>

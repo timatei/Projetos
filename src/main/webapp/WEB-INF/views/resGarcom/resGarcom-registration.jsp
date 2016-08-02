@@ -99,10 +99,10 @@
 									<div class="col-sm-8">
                                         <c:choose>
                                             <c:when test="${edit}">
-                                                <input type="submit" value="Atualizar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/resGarcon/list' />">Desistir</a>
+                                                <input type="submit" value="Atualizar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/resGarcom/list' />">Desistir</a>
                                             </c:when>
                                             <c:otherwise>
-                                                <input type="submit" value="Cadastrar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/resGarcon/list' />">Desistir</a>
+                                                <input type="submit" value="Cadastrar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/resGarcom/list' />">Desistir</a>
                                             </c:otherwise>
                                         </c:choose>
 									</div>

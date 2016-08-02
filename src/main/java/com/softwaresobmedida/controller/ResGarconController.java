@@ -20,7 +20,7 @@ import com.softwaresobmedida.security.UtilSecurity;
 import com.softwaresobmedida.service.ResGarconService;
 
 @Controller
-@RequestMapping("/resGarcon")
+@RequestMapping("/resGarcom")
 @SessionAttributes("roles")
 public class ResGarconController {
 	@Autowired
@@ -36,7 +36,7 @@ public class ResGarconController {
 		List<ResGarcon> lista = resGarconService.findAll();
 		model.addAttribute("lista", lista);
 		model.addAttribute("loggedinuser", UtilSecurity.getPrincipal());
-		return "resGarcon/resGarcon-list";
+		return "resGarcom/resGarcom-list";
 	}
 
 	@RequestMapping(value = { "/new" }, method = RequestMethod.GET)
@@ -47,7 +47,7 @@ public class ResGarconController {
 		model.addAttribute("resGarcon", resGarcon);
 		model.addAttribute("edit", false);
 		model.addAttribute("loggedinuser", UtilSecurity.getPrincipal());
-		return "resGarcon/resGarcon-registration";
+		return "resGarcom/resGarcom-registration";
 	}
 
 	@RequestMapping(value = { "/new" }, method = RequestMethod.POST)
@@ -59,13 +59,13 @@ public class ResGarconController {
 	{
 
 		if (result.hasErrors()) {
-			return "resGarcon/resGarcon-registration";
+			return "resGarcom/resGarcom-registration";
 		}
 
 		resGarconService.save(resGarcon);
 
 		redirectAttributes.addFlashAttribute("success", "Cadastrado com sucesso!");
-		return "redirect:/resGarcon/list";
+		return "redirect:/resGarcom/list";
 	}
 
 	@RequestMapping(value = { "/edit-{id}" }, method = RequestMethod.GET)
@@ -77,7 +77,7 @@ public class ResGarconController {
 		model.addAttribute("resGarcon", resGarcon);
 		model.addAttribute("edit", true);
 		model.addAttribute("loggedinuser", UtilSecurity.getPrincipal());
-		return "resGarcon/resGarcon-registration";
+		return "resGarcom/resGarcom-registration";
 	}
 	
 	@RequestMapping(value = { "/edit-{id}" }, method = RequestMethod.POST)
@@ -89,13 +89,13 @@ public class ResGarconController {
 			final RedirectAttributes redirectAttributes) 
 	{
 		if (result.hasErrors()) {
-			return "resGarcon/resGarcon-registration";
+			return "resGarcom/resGarcom-registration";
 		}
 
 		resGarconService.update(resGarcon);
 
 		redirectAttributes.addFlashAttribute("success", "Atualizado com sucesso!");
-		return "redirect:/resGarcon/list";
+		return "redirect:/resGarcom/list";
 	}
 	
 	@RequestMapping(value = { "/delete-{id}" }, method = RequestMethod.GET)
@@ -105,6 +105,6 @@ public class ResGarconController {
 	{
 		redirectAttributes.addFlashAttribute("warning", "Deletado com sucesso!");
 		resGarconService.deleteById(new Integer(id));
-		return "redirect:/resGarcon/list";
+		return "redirect:/resGarcom/list";
 	}
 }

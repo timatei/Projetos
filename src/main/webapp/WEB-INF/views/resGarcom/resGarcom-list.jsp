@@ -68,7 +68,7 @@
                                 </div>
                             </c:if>
                             <div>
-								<a class="btn btn-primary" href="<c:url value='/resGarcon/new' />">Cadastrar novo</a>
+								<a class="btn btn-primary" href="<c:url value='/resGarcom/new' />">Cadastrar novo</a>
                             </div>
 							<br/>
                             <div class="dataTable_wrapper">
@@ -88,10 +88,10 @@
 												<td width="80" style="text-align:center">${resGarcon.perc}</td>
 												<td width="90" style="text-align:center">${resGarcon.entregador}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/resGarcon/edit-${resGarcon.codGarcon}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/resGarcom/edit-${resGarcon.codGarcon}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/resGarcon/delete-${resGarcon.codGarcon}' />" 
+												    	data-href="<c:url value='/resGarcom/delete-${resGarcon.codGarcon}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>
