@@ -37,17 +37,17 @@ public class Banco implements Serializable {
 	@Id
 	@Column(name="CODBANCO", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_BANCO")
-	@XmlElement(name = "codbanco")
-	private Integer codbanco;
+	@XmlElement(name = "codBanco")
+	private Integer codBanco;
 
-	public void setCodbanco(Integer codbanco)
+	public void setCodBanco(Integer codBanco)
 	{
-		this.codbanco = codbanco;
+		this.codBanco = codBanco;
 	}
 
-	public Integer getCodbanco()
+	public Integer getCodBanco()
 	{
-		return codbanco;
+		return codBanco;
 	}
 
 	@Column(name="BAN_DESCRICAO", nullable =  true , length = 30)

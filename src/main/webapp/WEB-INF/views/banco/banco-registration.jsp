@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Banco</h1>
+                    <h1 class="page-header">Conta bancária</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,14 +48,14 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de banco
+                            Cadastro de conta bancária
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="banco" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codbanco" id="codbanco"/>
+                                <form:input type="hidden" path="codBanco" id="codBanco"/>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Descricao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Descrição:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="descricao" id="descricao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -65,17 +65,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">SaldoInicial:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="saldoInicial" id="saldoInicial" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="saldoInicial" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">SaldoAtual:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Saldo Atual:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="saldoAtual" id="saldoAtual" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -85,47 +75,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Contas:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="contas" id="contas" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="contas" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Modificacao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="modificacao" id="modificacao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="modificacao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Revisao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="revisao" id="revisao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="revisao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Aux:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="aux" id="aux" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="aux" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Agencia:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Agência:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="agencia" id="agencia" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -135,7 +85,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Operacao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Operação:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="operacao" id="operacao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -155,7 +105,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">DataInicial:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Data Inicial:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="dataInicial" id="dataInicial" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -165,7 +115,17 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">SaldoConciliado:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Saldo Inicial:</label>
+									<div class="col-sm-8">
+										<form:input type="text" path="saldoInicial" id="saldoInicial" class="form-control has-suggestions"/>
+	                                    <div class="has-error">
+	                                        <form:errors path="saldoInicial" class="label label-danger"/>
+	                                    </div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="inline-suggestions">Saldo Conciliado:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="saldoConciliado" id="saldoConciliado" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -175,21 +135,21 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">SaldoExtrato:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Data Extrato:</label>
 									<div class="col-sm-8">
-										<form:input type="text" path="saldoExtrato" id="saldoExtrato" class="form-control has-suggestions"/>
+										<form:input type="text" path="dataExtrato" id="dataExtrato" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
-	                                        <form:errors path="saldoExtrato" class="label label-danger"/>
+	                                        <form:errors path="dataExtrato" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">DataExtrato:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Saldo Extrato:</label>
 									<div class="col-sm-8">
-										<form:input type="text" path="dataExtrato" id="dataExtrato" class="form-control has-suggestions"/>
+										<form:input type="text" path="saldoExtrato" id="saldoExtrato" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
-	                                        <form:errors path="dataExtrato" class="label label-danger"/>
+	                                        <form:errors path="saldoExtrato" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>
