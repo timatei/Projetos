@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ProdutoPersonalizacao</h1>
+                    <h1 class="page-header">Produto personalização</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,28 +48,28 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de produtoPersonalizacao
+                            Cadastro de produto personalização
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="produtoPersonalizacao" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codprodutopersonalizacao" id="codprodutopersonalizacao"/>
+                                <form:input type="hidden" path="codProdutoPersonalizacao" id="codProdutoPersonalizacao"/>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Codproduto:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Cód. Produto:</label>
 									<div class="col-sm-8">
-										<form:input type="text" path="codproduto" id="codproduto" class="form-control has-suggestions"/>
+										<form:input type="text" path="produto.codProduto" id="produto.codProduto" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
-	                                        <form:errors path="codproduto" class="label label-danger"/>
+	                                        <form:errors path="produto.codProduto" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Codgrupopersonalizacao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Cód. Grupo Personalização:</label>
 									<div class="col-sm-8">
-										<form:input type="text" path="codgrupopersonalizacao" id="codgrupopersonalizacao" class="form-control has-suggestions"/>
+										<form:input type="text" path="grupoPersonalizacao.codGrupoPersonalizacao" id="grupoPersonalizacao.codGrupoPersonalizacao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
-	                                        <form:errors path="codgrupopersonalizacao" class="label label-danger"/>
+	                                        <form:errors path="grupoPersonalizacao.codGrupoPersonalizacao" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>
