@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ResGarcon</h1>
+                    <h1 class="page-header">Garçom</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,11 +48,11 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de resGarcon
+                            Cadastro de garçom
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="resGarcon" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codgarcon" id="codgarcon"/>
+                                <form:input type="hidden" path="codGarcon" id="codGarcon"/>
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label" for="inline-suggestions">Nome:</label>
@@ -67,7 +67,7 @@
 								<div class="form-group">
 									<label class="col-sm-2 control-label" for="inline-suggestions">Senha:</label>
 									<div class="col-sm-8">
-										<form:input type="text" path="senha" id="senha" class="form-control has-suggestions"/>
+										<form:input type="password" path="senha" id="senha" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
 	                                        <form:errors path="senha" class="label label-danger"/>
 	                                    </div>

@@ -44,7 +44,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ResGarcon</h1>
+                    <h1 class="page-header">Garçom</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>            
@@ -53,7 +53,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Listagem de resGarcon
+                            Listagem de garçom
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -76,9 +76,8 @@
                                     <thead>
 							      		<tr>
 									        <th>Nome</th>
-									        <th>Senha</th>
-									        <th>Perc</th>
-									        <th>Entregador</th>
+									        <th width="80" style="text-align:center">Comissão</th>
+									        <th width="90" style="text-align:center">Entregador</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -86,14 +85,13 @@
 										<c:forEach items="${lista}" var="resGarcon">
 											<tr class="odd gradeX">
 												<td>${resGarcon.nome}</td>
-												<td>${resGarcon.senha}</td>
-												<td>${resGarcon.perc}</td>
-												<td>${resGarcon.entregador}</td>
+												<td width="80" style="text-align:center">${resGarcon.perc}</td>
+												<td width="90" style="text-align:center">${resGarcon.entregador}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/resGarcon/edit-${resGarcon.codgarcon}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/resGarcon/edit-${resGarcon.codGarcon}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/resGarcon/delete-${resGarcon.codgarcon}' />" 
+												    	data-href="<c:url value='/resGarcon/delete-${resGarcon.codGarcon}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>
