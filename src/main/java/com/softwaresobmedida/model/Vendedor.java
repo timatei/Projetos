@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Vendedor implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public static String CAMPO_CHAVE = "id";
+	public static String CAMPO_CHAVE = "codvendedor";
 
 	public Vendedor() {	
 	}
@@ -38,16 +38,16 @@ public class Vendedor implements Serializable {
 	@Column(name="CODVENDEDOR", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_VENDEDOR")
 	@XmlElement(name = "codvendedor")
-	private Integer codvendedor;
+	private Integer codVendedor;
 
-	public void setCodvendedor(Integer codvendedor)
+	public void setCodVendedor(Integer codVendedor)
 	{
-		this.codvendedor = codvendedor;
+		this.codVendedor = codVendedor;
 	}
 
-	public Integer getCodvendedor()
+	public Integer getCodVendedor()
 	{
-		return codvendedor;
+		return codVendedor;
 	}
 
 	@Column(name="VEN_NOME", nullable =  true , length = 60)
@@ -79,17 +79,17 @@ public class Vendedor implements Serializable {
 	}
 
 	@Column(name="CODSEGUSU", nullable =  true , length = 11)
-	@XmlElement(name = "codsegusu")
-	private Integer codsegusu;
+	@XmlElement(name = "codSegUsu")
+	private Integer codSegUsu;
 
-	public void setCodsegusu(Integer codsegusu)
+	public void setCodSegUsu(Integer codSegUsu)
 	{
-		this.codsegusu = codsegusu;
+		this.codSegUsu = codSegUsu;
 	}
 
-	public Integer getCodsegusu()
+	public Integer getCodSegUsu()
 	{
-		return codsegusu;
+		return codSegUsu;
 	}
 
 	@Column(name="VEN_SENHA", nullable =  true , length = 20)
@@ -106,75 +106,6 @@ public class Vendedor implements Serializable {
 		return senha;
 	}
 
-	@Column(name="SSM_MODIFICACAO", nullable =  true , length = 19)
-	@XmlElement(name = "modificacao")
-	private java.sql.Timestamp modificacao;
-
-	public void setModificacao(java.sql.Timestamp modificacao)
-	{
-		this.modificacao = modificacao;
-	}
-
-	public java.sql.Timestamp getModificacao()
-	{
-		return modificacao;
-	}
-
-	@Column(name="SSM_REVISAO", nullable =  true , length = 11)
-	@XmlElement(name = "revisao")
-	private Integer revisao;
-
-	public void setRevisao(Integer revisao)
-	{
-		this.revisao = revisao;
-	}
-
-	public Integer getRevisao()
-	{
-		return revisao;
-	}
-
-	@Column(name="AUX", nullable =  true , length = 1)
-	@XmlElement(name = "aux")
-	private String aux;
-
-	public void setAux(String aux)
-	{
-		this.aux = aux;
-	}
-
-	public String getAux()
-	{
-		return aux;
-	}
-
-	public void setAuxBoolean(Boolean value)
-	{
-		if (value) {
-			this.aux = "S";
-		}
-		else {
-			this.aux = "N";
-		}
-	}
-	public Boolean getAuxBoolean()
-	{
-		return ((this.aux != null)&&(this.aux.equalsIgnoreCase("S")));
-	}
-	@Column(name="VEN_DADOS_ASSINATURA", nullable =  true , length = 0)
-	@XmlElement(name = "dadosAssinatura")
-	private String dadosAssinatura;
-
-	public void setDadosAssinatura(String dadosAssinatura)
-	{
-		this.dadosAssinatura = dadosAssinatura;
-	}
-
-	public String getDadosAssinatura()
-	{
-		return dadosAssinatura;
-	}
-
 	@Column(name="VEN_TIPO_VENDEDOR", nullable =  true , length = 1)
 	@XmlElement(name = "tipoVendedor")
 	private String tipoVendedor;
@@ -187,19 +118,5 @@ public class Vendedor implements Serializable {
 	public String getTipoVendedor()
 	{
 		return tipoVendedor;
-	}
-
-	public void setTipoVendedorBoolean(Boolean value)
-	{
-		if (value) {
-			this.tipoVendedor = "S";
-		}
-		else {
-			this.tipoVendedor = "N";
-		}
-	}
-	public Boolean getTipoVendedorBoolean()
-	{
-		return ((this.tipoVendedor != null)&&(this.tipoVendedor.equalsIgnoreCase("S")));
 	}
 }

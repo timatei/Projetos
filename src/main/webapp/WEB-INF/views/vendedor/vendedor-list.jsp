@@ -15,8 +15,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="../static/startbootstrap/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS 
-    <link href="../static/startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet"> -->
+    <!-- MetisMenu CSS -->
+    <link href="../static/startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- DataTables CSS -->
     <link href="../static/startbootstrap/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
@@ -57,14 +57,14 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                        	<c:if test="{$success ne null}">
+                        	<c:if test="${success ne null}">
 								<div class="alert alert-success lead">
 							    	${success}
 								</div>
                         	</c:if>
-                        	<c:if test="{$warning ne null}">
+                        	<c:if test="${warning ne null}">
 								<div class="alert alert-warning lead">
-							    	${$warning}
+							    	${warning}
 								</div>
                         	</c:if>                        	
                             <div>
@@ -76,10 +76,8 @@
                                     <thead>
 							      		<tr>
 									        <th>Nome</th>
-									        <th>PercComissao</th>
-									        <th>Codsegusu</th>
-									        <th>Senha</th>
-									        <th>Modificacao</th>
+									        <th width="80" style="text-align:center">Comissão</th>
+									        <th width="70" style="text-align:center">Cód.Seg</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -87,15 +85,13 @@
 										<c:forEach items="${lista}" var="vendedor">
 											<tr class="odd gradeX">
 												<td>${vendedor.nome}</td>
-												<td>${vendedor.percComissao}</td>
-												<td>${vendedor.codsegusu}</td>
-												<td>${vendedor.senha}</td>
-												<td>${vendedor.modificacao}</td>
+												<td width="80" style="text-align:center">${vendedor.percComissao}</td>
+												<td width="70" style="text-align:center">${vendedor.codSegUsu}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/vendedor/edit-${vendedor.codvendedor}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/vendedor/edit-${vendedor.codVendedor}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/vendedor/delete-${vendedor.codvendedor}' />" 
+												    	data-href="<c:url value='/vendedor/delete-${vendedor.codVendedor}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>

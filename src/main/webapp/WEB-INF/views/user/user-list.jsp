@@ -67,12 +67,6 @@
 							    	${warning}
 								</div>
                         	</c:if>                        	
-                        	<c:if test="${warning ne null}">
-								<div class="alert alert-warning lead">
-							    	${warning}
-								</div>
-                        	</c:if>                        	
-                        	
                             <div>
 								<sec:authorize access="hasRole('ADMIN')">
 									<a class="btn btn-primary" href="<c:url value='/user/newuser' />">Cadastrar novo</a>

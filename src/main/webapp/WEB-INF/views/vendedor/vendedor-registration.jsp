@@ -52,7 +52,7 @@
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="vendedor" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codvendedor" id="codvendedor"/>
+                                <form:input type="hidden" path="codVendedor" id="codVendedor"/>
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label" for="inline-suggestions">Nome:</label>
@@ -65,7 +65,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">PercComissao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Comissão:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="percComissao" id="percComissao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -75,11 +75,11 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Codsegusu:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Cód.Seg:</label>
 									<div class="col-sm-8">
-										<form:input type="text" path="codsegusu" id="codsegusu" class="form-control has-suggestions"/>
+										<form:input type="text" path="codSegUsu" id="codSegUsu" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
-	                                        <form:errors path="codsegusu" class="label label-danger"/>
+	                                        <form:errors path="codSegUsu" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>
@@ -95,47 +95,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Modificacao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="modificacao" id="modificacao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="modificacao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Revisao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="revisao" id="revisao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="revisao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Aux:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="aux" id="aux" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="aux" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">DadosAssinatura:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="dadosAssinatura" id="dadosAssinatura" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="dadosAssinatura" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">TipoVendedor:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Tipo Vendedor:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="tipoVendedor" id="tipoVendedor" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
