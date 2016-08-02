@@ -44,7 +44,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ResControle</h1>
+                    <h1 class="page-header">Mesa</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>            
@@ -53,7 +53,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Listagem de resControle
+                            Listagem de mesa
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -75,21 +75,23 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>Status</th>
-									        <th>CobrarServico</th>
+							      			<th>Código</th>
+									        <th width="70" style="text-align:center">Status</th>
+									        <th width="60" style="text-align:center">Serviço</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
                                     <tbody>
 										<c:forEach items="${lista}" var="resControle">
 											<tr class="odd gradeX">
-												<td>${resControle.status}</td>
-												<td>${resControle.cobrarServico}</td>
+												<td>${resControle.codControle}</td>
+												<td width="70" style="text-align:center">${resControle.status}</td>
+												<td width="60" style="text-align:center">${resControle.cobrarServico}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/resControle/edit-${resControle.codcontrole}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/resControle/edit-${resControle.codControle}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/resControle/delete-${resControle.codcontrole}' />" 
+												    	data-href="<c:url value='/resControle/delete-${resControle.codControle}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>

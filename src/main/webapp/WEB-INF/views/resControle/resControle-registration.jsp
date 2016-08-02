@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ResControle</h1>
+                    <h1 class="page-header">Mesa</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,11 +48,20 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de resControle
+                            Cadastro de mesa
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="resControle" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codcontrole" id="codcontrole"/>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="inline-suggestions">Código:</label>
+									<div class="col-sm-8">
+										<form:input type="text" path="codControle" id="codControle" class="form-control has-suggestions" readonly="true" />
+	                                    <div class="has-error">
+	                                        <form:errors path="codControle" class="label label-danger"/>
+	                                    </div>
+									</div>
+								</div>
+
 
 								<div class="form-group">
 									<label class="col-sm-2 control-label" for="inline-suggestions">Status:</label>
