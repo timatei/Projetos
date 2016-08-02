@@ -20,6 +20,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+
 @Entity
 @Table(name = "PRODUTO")
 @SequenceGenerator(name = "INC_PRODUTO", sequenceName = "GEN_PRODUTO")
@@ -123,6 +126,7 @@ public class Produto implements Serializable {
 	
 	@OneToOne(cascade = CascadeType.DETACH)
 	@JoinColumn(name="CODPRODUTOGRUPOSUBGRP")
+	@NotFound(action=NotFoundAction.IGNORE)
 	@XmlElement(name = "produtoGrupoSubGrp")
 	private ProdutoGrupoSubGrp produtoGrupoSubGrp;
 	public void setProdutoGrupoSubGrp(ProdutoGrupoSubGrp produtoGrupoSubGrp) {

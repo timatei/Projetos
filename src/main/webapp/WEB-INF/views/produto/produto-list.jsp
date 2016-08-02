@@ -75,27 +75,25 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>Codpesq1</th>
-									        <th>Descricao</th>
-									        <th>Ativo</th>
-									        <th>TipoProduto</th>
-									        <th>Codprodutogrupo</th>
+									        <th width="80" style="text-align:center">Cód.Pesq.</th>
+									        <th>Descrição</th>
+									        <th width="50" style="text-align:center">Ativo</th>
+									        <th width="50" style="text-align:center">Tipo</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
                                     <tbody>
 										<c:forEach items="${lista}" var="produto">
 											<tr class="odd gradeX">
-												<td>${produto.codpesq1}</td>
+												<td width="80" style="text-align:center">${produto.codPesq1}</td>
 												<td>${produto.descricao}</td>
-												<td>${produto.ativo}</td>
-												<td>${produto.tipoProduto}</td>
-												<td>${produto.codprodutogrupo}</td>
+												<td width="50" style="text-align:center">${produto.ativo}</td>
+												<td width="50" style="text-align:center">${produto.tipoProduto}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/produto/edit-${produto.codproduto}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/produto/edit-${produto.codProduto}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/produto/delete-${produto.codproduto}' />" 
+												    	data-href="<c:url value='/produto/delete-${produto.codProduto}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>
