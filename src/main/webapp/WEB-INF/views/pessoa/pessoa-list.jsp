@@ -57,16 +57,16 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                        	<c:if test="{$success ne null}">
-								<div class="alert alert-success lead">
-							    	${success}
-								</div>
-                        	</c:if>
-                        	<c:if test="{$warning ne null}">
-								<div class="alert alert-warning lead">
-							    	${$warning}
-								</div>
-                        	</c:if>                        	
+                            <c:if test="${success ne null}">
+                                <div class="alert alert-success lead">
+                                    ${success}
+                                </div>
+                            </c:if>
+                            <c:if test="${warning ne null}">
+                                <div class="alert alert-warning lead">
+                                    ${warning}
+                                </div>
+                            </c:if>
                             <div>
 								<a class="btn btn-primary" href="<c:url value='/pessoa/new' />">Cadastrar novo</a>
                             </div>

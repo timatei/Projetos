@@ -15,8 +15,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="../static/startbootstrap/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS 
-    <link href="../static/startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet"> -->
+    <!-- MetisMenu CSS  -->
+    <link href="../static/startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- DataTables CSS -->
     <link href="../static/startbootstrap/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
@@ -57,16 +57,16 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                        	<c:if test="{$success ne null}">
-								<div class="alert alert-success lead">
-							    	${success}
-								</div>
-                        	</c:if>
-                        	<c:if test="{$warning ne null}">
-								<div class="alert alert-warning lead">
-							    	${$warning}
-								</div>
-                        	</c:if>                        	
+                            <c:if test="${success ne null}">
+                                <div class="alert alert-success lead">
+                                    ${success}
+                                </div>
+                            </c:if>
+                            <c:if test="${warning ne null}">
+                                <div class="alert alert-warning lead">
+                                    ${warning}
+                                </div>
+                            </c:if>
                             <div>
 								<a class="btn btn-primary" href="<c:url value='/resGarcon/new' />">Cadastrar novo</a>
                             </div>
