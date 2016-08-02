@@ -15,8 +15,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="../static/startbootstrap/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS 
-    <link href="../static/startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet"> -->
+    <!-- MetisMenu CSS -->
+    <link href="../static/startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- DataTables CSS -->
     <link href="../static/startbootstrap/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
@@ -75,11 +75,10 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>TipoPessoa</th>
+									        <th>Tipo</th>
 									        <th>Nome</th>
-									        <th>RazaoSocial</th>
-									        <th>Cpfcnpj</th>
-									        <th>Ie</th>
+									        <th>Razão Social</th>
+									        <th>CNPJ/CPF</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -90,12 +89,11 @@
 												<td>${pessoa.nome}</td>
 												<td>${pessoa.razaoSocial}</td>
 												<td>${pessoa.cpfcnpj}</td>
-												<td>${pessoa.ie}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/pessoa/edit-${pessoa.codpessoa}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/pessoa/edit-${pessoa.codPessoa}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/pessoa/delete-${pessoa.codpessoa}' />" 
+												    	data-href="<c:url value='/pessoa/delete-${pessoa.codPessoa}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>
