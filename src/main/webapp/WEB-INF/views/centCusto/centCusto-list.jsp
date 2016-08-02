@@ -44,7 +44,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Centcusto</h1>
+                    <h1 class="page-header">Centro de custo</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>            
@@ -53,7 +53,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Listagem de centcusto
+                            Listagem de centro de custo
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -75,11 +75,7 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>Descricao</th>
-									        <th>Grau1</th>
-									        <th>Grau2</th>
-									        <th>Grau3</th>
-									        <th>Grau4</th>
+									        <th>Descrição</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -87,15 +83,11 @@
 										<c:forEach items="${lista}" var="centcusto">
 											<tr class="odd gradeX">
 												<td>${centcusto.descricao}</td>
-												<td>${centcusto.grau1}</td>
-												<td>${centcusto.grau2}</td>
-												<td>${centcusto.grau3}</td>
-												<td>${centcusto.grau4}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/centcusto/edit-${centcusto.codcentcusto}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/centCusto/edit-${centcusto.codCentCusto}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/centcusto/delete-${centcusto.codcentcusto}' />" 
+												    	data-href="<c:url value='/centCusto/delete-${centcusto.codCentCusto}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>

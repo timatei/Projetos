@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Centcusto</h1>
+                    <h1 class="page-header">Centro de custo</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,118 +48,18 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de centcusto
+                            Cadastro de centro de custo
                         </div>
                         <div class="panel-body">
-                            <form:form method="POST" modelAttribute="centcusto" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codcentcusto" id="codcentcusto"/>
+                            <form:form method="POST" modelAttribute="centCusto" class="form form-horizontal has-validation-callback">
+                                <form:input type="hidden" path="codCentCusto" id="codCentCusto"/>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Descricao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Descrição:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="descricao" id="descricao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
 	                                        <form:errors path="descricao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Grau1:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="grau1" id="grau1" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="grau1" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Grau2:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="grau2" id="grau2" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="grau2" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Grau3:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="grau3" id="grau3" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="grau3" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Grau4:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="grau4" id="grau4" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="grau4" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Grau5:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="grau5" id="grau5" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="grau5" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Grau6:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="grau6" id="grau6" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="grau6" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">UltimoNivel:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="ultimoNivel" id="ultimoNivel" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="ultimoNivel" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Numeracao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="numeracao" id="numeracao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="numeracao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Modificacao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="modificacao" id="modificacao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="modificacao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Aux:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="aux" id="aux" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="aux" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>
@@ -169,10 +69,10 @@
 									<div class="col-sm-8">
                                         <c:choose>
                                             <c:when test="${edit}">
-                                                <input type="submit" value="Atualizar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/centcusto/list' />">Desistir</a>
+                                                <input type="submit" value="Atualizar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/centCusto/list' />">Desistir</a>
                                             </c:when>
                                             <c:otherwise>
-                                                <input type="submit" value="Cadastrar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/centcusto/list' />">Desistir</a>
+                                                <input type="submit" value="Cadastrar" class="btn btn-success custom-width"/> ou <a href="<c:url value='/centCusto/list' />">Desistir</a>
                                             </c:otherwise>
                                         </c:choose>
 									</div>
