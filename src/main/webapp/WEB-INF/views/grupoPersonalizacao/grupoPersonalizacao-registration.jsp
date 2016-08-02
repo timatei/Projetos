@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">GrupoPersonalizacao</h1>
+                    <h1 class="page-header">Grupo personalização</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,14 +48,14 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de grupoPersonalizacao
+                            Cadastro de grupo personalização
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="grupoPersonalizacao" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codgrupopersonalizacao" id="codgrupopersonalizacao"/>
+                                <form:input type="hidden" path="codGrupoPersonalizacao" id="codGrupoPersonalizacao"/>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Descricao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Descrição:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="descricao" id="descricao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">

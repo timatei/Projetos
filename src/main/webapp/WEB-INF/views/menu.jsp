@@ -88,10 +88,10 @@
 				                            <a href="<c:url value='/grupoPersonalizacao/list'/>"><i class="fa fa-magic fa-fw"></i> Grupo personalização</a>
 				                        </li>
 				                        <li>
-				                            <a href="<c:url value='/produto/list'/>"><i class="fa fa-lightbulb-o fa-fw"></i> Produto</a>
+				                            <a href="<c:url value='/produtoPersonalizacao/list'/>"><i class="fa fa-magic fa-fw"></i> Produto personalização</a>
 				                        </li>
 				                        <li>
-				                            <a href="<c:url value='/produtoPersonalizacao/list'/>"><i class="fa fa-magic fa-fw"></i> Produto personalização</a>
+				                            <a href="<c:url value='/produto/list'/>"><i class="fa fa-lightbulb-o fa-fw"></i> Produto</a>
 				                        </li>
 		                            </ul>
 			                        </li>
