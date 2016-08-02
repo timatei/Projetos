@@ -52,10 +52,10 @@
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="moeda" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codmoeda" id="codmoeda"/>
+                                <form:input type="hidden" path="codMoeda" id="codMoeda"/>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Descricao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Descrição:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="descricao" id="descricao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -73,147 +73,6 @@
 	                                    </div>
 									</div>
 								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">PerDesc:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="perDesc" id="perDesc" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="perDesc" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">DiasComp:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="diasComp" id="diasComp" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="diasComp" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Codecf:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="codecf" id="codecf" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="codecf" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">NaoVisFech:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="naoVisFech" id="naoVisFech" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="naoVisFech" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">DadosPos:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="dadosPos" id="dadosPos" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="dadosPos" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">BaixarSempre:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="baixarSempre" id="baixarSempre" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="baixarSempre" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Numdias:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="numdias" id="numdias" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="numdias" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">NumdiasDemais:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="numdiasDemais" id="numdiasDemais" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="numdiasDemais" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">ConChe:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="conChe" id="conChe" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="conChe" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Gp:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="gp" id="gp" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="gp" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Modificacao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="modificacao" id="modificacao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="modificacao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Aux:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="aux" id="aux" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="aux" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">DescricaoEcf:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="descricaoEcf" id="descricaoEcf" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="descricaoEcf" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Codbanco:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="codbanco" id="codbanco" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="codbanco" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
 								<div class="row">
 									<label class="col-sm-2 control-label" for="inline-suggestions"></label>
 									<div class="col-sm-8">

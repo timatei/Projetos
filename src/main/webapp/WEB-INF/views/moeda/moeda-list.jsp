@@ -75,11 +75,8 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-lista">
                                     <thead>
 							      		<tr>
-									        <th>Descricao</th>
-									        <th>Tipo</th>
-									        <th>PerDesc</th>
-									        <th>DiasComp</th>
-									        <th>Codecf</th>
+									        <th>Descrição</th>
+									        <th width="50" style="text-align:center">Tipo</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -87,15 +84,12 @@
 										<c:forEach items="${lista}" var="moeda">
 											<tr class="odd gradeX">
 												<td>${moeda.descricao}</td>
-												<td>${moeda.tipo}</td>
-												<td>${moeda.perDesc}</td>
-												<td>${moeda.diasComp}</td>
-												<td>${moeda.codecf}</td>
+												<td width="60" style="text-align:center">${moeda.tipo}</td>
 												<td width="50" style="text-align:center">
-													<a href="<c:url value='/moeda/edit-${moeda.codmoeda}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
+													<a href="<c:url value='/moeda/edit-${moeda.codMoeda}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
 												    	class="btn btn-danger btn-circle"
-												    	data-href="<c:url value='/moeda/delete-${moeda.codmoeda}' />" 
+												    	data-href="<c:url value='/moeda/delete-${moeda.codMoeda}' />" 
 												    	data-toggle="modal" 
 												    	data-target="#confirm-delete">
 												    	<i class="fa fa-times"></i>
