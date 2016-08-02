@@ -39,7 +39,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Formapagamento</h1>
+                    <h1 class="page-header">Forma de pagamento</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -48,14 +48,14 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Cadastro de formapagamento
+                            Cadastro de forma de pagamento
                         </div>
                         <div class="panel-body">
                             <form:form method="POST" modelAttribute="formapagamento" class="form form-horizontal has-validation-callback">
-                                <form:input type="hidden" path="codformapagamento" id="codformapagamento"/>
+                                <form:input type="hidden" path="codFormaPagamento" id="codFormaPagamento"/>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Descricao:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Descrição:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="descricao" id="descricao" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -75,7 +75,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Numdias:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Número de dias da 1 parcela:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="numdias" id="numdias" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
@@ -85,101 +85,11 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">NumdiasDemais:</label>
+									<label class="col-sm-2 control-label" for="inline-suggestions">Número de dias das demais parcelas:</label>
 									<div class="col-sm-8">
 										<form:input type="text" path="numdiasDemais" id="numdiasDemais" class="form-control has-suggestions"/>
 	                                    <div class="has-error">
 	                                        <form:errors path="numdiasDemais" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Codmoeda:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="codmoeda" id="codmoeda" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="codmoeda" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">PerAcres:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="perAcres" id="perAcres" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="perAcres" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Separar:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="separar" id="separar" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="separar" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Vrp:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="vrp" id="vrp" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="vrp" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Tipopreco:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="tipopreco" id="tipopreco" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="tipopreco" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">VlrMin:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="vlrMin" id="vlrMin" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="vlrMin" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Modificacao:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="modificacao" id="modificacao" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="modificacao" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">Aux:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="aux" id="aux" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="aux" class="label label-danger"/>
-	                                    </div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inline-suggestions">PerDesc:</label>
-									<div class="col-sm-8">
-										<form:input type="text" path="perDesc" id="perDesc" class="form-control has-suggestions"/>
-	                                    <div class="has-error">
-	                                        <form:errors path="perDesc" class="label label-danger"/>
 	                                    </div>
 									</div>
 								</div>

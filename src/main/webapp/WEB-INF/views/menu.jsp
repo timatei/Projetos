@@ -85,13 +85,13 @@
 				                            <a href="<c:url value='/produtoUnidade/list'/>"><i class="fa fa-arrows fa-fw"></i> Unidade</a>
 				                        </li>
 				                        <li>
-				                            <a href="<c:url value='/grupoPersonalizacao/list'/>"><i class="fa fa-magic fa-fw"></i> Grupo Personalização</a>
+				                            <a href="<c:url value='/grupoPersonalizacao/list'/>"><i class="fa fa-magic fa-fw"></i> Grupo personalização</a>
 				                        </li>
 				                        <li>
 				                            <a href="<c:url value='/produto/list'/>"><i class="fa fa-lightbulb-o fa-fw"></i> Produto</a>
 				                        </li>
 				                        <li>
-				                            <a href="<c:url value='/produtoPersonalizacao/list'/>"><i class="fa fa-magic fa-fw"></i> Produto Personalização</a>
+				                            <a href="<c:url value='/produtoPersonalizacao/list'/>"><i class="fa fa-magic fa-fw"></i> Produto personalização</a>
 				                        </li>
 		                            </ul>
 			                        </li>
@@ -99,13 +99,13 @@
 			                            <a href="<c:url value='/moeda/list'/>"><i class="fa fa-dollar fa-fw"></i> Moeda</a>
 			                        </li>
 			                        <li>
-			                            <a href="<c:url value='/formapagamento/list'/>"><i class="fa fa-pagelines fa-fw"></i> Forma de Pagamento</a>
+			                            <a href="<c:url value='/formapagamento/list'/>"><i class="fa fa-pagelines fa-fw"></i> Forma de pagamento</a>
 			                        </li>
 			                        <li>
-			                            <a href="<c:url value='/banco/list'/>"><i class="fa fa-th-large fa-fw"></i> Conta Bancária</a>
+			                            <a href="<c:url value='/banco/list'/>"><i class="fa fa-th-large fa-fw"></i> Conta bancária</a>
 			                        </li>
 			                        <li>
-			                            <a href="<c:url value='/centCusto/list'/>"><i class="fa fa-trophy fa-fw"></i> Centro de Custo</a>
+			                            <a href="<c:url value='/centCusto/list'/>"><i class="fa fa-trophy fa-fw"></i> Centro de custo</a>
 			                        </li>
 		                            <!-- /.nav-second-level -->
                             </ul>

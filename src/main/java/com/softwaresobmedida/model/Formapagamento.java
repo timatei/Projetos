@@ -37,17 +37,17 @@ public class Formapagamento implements Serializable {
 	@Id
 	@Column(name="CODFORMAPAGAMENTO", nullable =  false , length = 11)
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "INC_FORMAPAGAMENTO")
-	@XmlElement(name = "codformapagamento")
-	private Integer codformapagamento;
+	@XmlElement(name = "codFormaPagamento")
+	private Integer codFormaPagamento;
 
-	public void setCodformapagamento(Integer codformapagamento)
+	public void setCodFormaPagamento(Integer codFormaPagamento)
 	{
-		this.codformapagamento = codformapagamento;
+		this.codFormaPagamento = codFormaPagamento;
 	}
 
-	public Integer getCodformapagamento()
+	public Integer getCodFormaPagamento()
 	{
-		return codformapagamento;
+		return codFormaPagamento;
 	}
 
 	@Column(name="FPG_DESCRICAO", nullable =  false , length = 30)
@@ -106,37 +106,9 @@ public class Formapagamento implements Serializable {
 		return numdiasDemais;
 	}
 
-	@Column(name="CODMOEDA", nullable =  true , length = 11)
-	@XmlElement(name = "codmoeda")
-	private Integer codmoeda;
-
-	public void setCodmoeda(Integer codmoeda)
-	{
-		this.codmoeda = codmoeda;
-	}
-
-	public Integer getCodmoeda()
-	{
-		return codmoeda;
-	}
-
-	@Column(name="FPG_PER_ACRES", nullable =  true , length = 17)
-	@XmlElement(name = "perAcres")
-	private Float perAcres= 0f;
-
-	public void setPerAcres(Float perAcres)
-	{
-		this.perAcres = perAcres;
-	}
-
-	public Float getPerAcres()
-	{
-		return perAcres;
-	}
-
-	@Column(name="FPG_SEPARAR", nullable =  false , length = 1)
+	@Column(name="FPG_SEPARAR", nullable =  true , length = 1)
 	@XmlElement(name = "separar")
-	private String separar;
+	private String separar = "N";
 
 	public void setSeparar(String separar)
 	{
@@ -147,23 +119,10 @@ public class Formapagamento implements Serializable {
 	{
 		return separar;
 	}
-
-	public void setSepararBoolean(Boolean value)
-	{
-		if (value) {
-			this.separar = "S";
-		}
-		else {
-			this.separar = "N";
-		}
-	}
-	public Boolean getSepararBoolean()
-	{
-		return ((this.separar != null)&&(this.separar.equalsIgnoreCase("S")));
-	}
-	@Column(name="FPG_VRP", nullable =  false , length = 1)
+	
+	@Column(name="FPG_VRP", nullable =  true , length = 1)
 	@XmlElement(name = "vrp")
-	private String vrp;
+	private String vrp = "N";
 
 	public void setVrp(String vrp)
 	{
@@ -174,101 +133,4 @@ public class Formapagamento implements Serializable {
 	{
 		return vrp;
 	}
-
-	public void setVrpBoolean(Boolean value)
-	{
-		if (value) {
-			this.vrp = "S";
-		}
-		else {
-			this.vrp = "N";
-		}
-	}
-	public Boolean getVrpBoolean()
-	{
-		return ((this.vrp != null)&&(this.vrp.equalsIgnoreCase("S")));
-	}
-	@Column(name="FPG_TIPOPRECO", nullable =  true , length = 2)
-	@XmlElement(name = "tipopreco")
-	private String tipopreco;
-
-	public void setTipopreco(String tipopreco)
-	{
-		this.tipopreco = tipopreco;
-	}
-
-	public String getTipopreco()
-	{
-		return tipopreco;
-	}
-
-	@Column(name="FPG_VLR_MIN", nullable =  true , length = 17)
-	@XmlElement(name = "vlrMin")
-	private Float vlrMin= 0f;
-
-	public void setVlrMin(Float vlrMin)
-	{
-		this.vlrMin = vlrMin;
-	}
-
-	public Float getVlrMin()
-	{
-		return vlrMin;
-	}
-
-	@Column(name="SSM_MODIFICACAO", nullable =  true , length = 19)
-	@XmlElement(name = "modificacao")
-	private java.sql.Timestamp modificacao;
-
-	public void setModificacao(java.sql.Timestamp modificacao)
-	{
-		this.modificacao = modificacao;
-	}
-
-	public java.sql.Timestamp getModificacao()
-	{
-		return modificacao;
-	}
-
-	@Column(name="AUX", nullable =  true , length = 1)
-	@XmlElement(name = "aux")
-	private String aux;
-
-	public void setAux(String aux)
-	{
-		this.aux = aux;
-	}
-
-	public String getAux()
-	{
-		return aux;
-	}
-
-	public void setAuxBoolean(Boolean value)
-	{
-		if (value) {
-			this.aux = "S";
-		}
-		else {
-			this.aux = "N";
-		}
-	}
-	public Boolean getAuxBoolean()
-	{
-		return ((this.aux != null)&&(this.aux.equalsIgnoreCase("S")));
-	}
-	@Column(name="FPG_PER_DESC", nullable =  true , length = 17)
-	@XmlElement(name = "perDesc")
-	private Float perDesc= 0f;
-
-	public void setPerDesc(Float perDesc)
-	{
-		this.perDesc = perDesc;
-	}
-
-	public Float getPerDesc()
-	{
-		return perDesc;
-	}
-
 }
