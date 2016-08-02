@@ -76,7 +76,7 @@
                                     <thead>
 							      		<tr>
 									        <th>Descrição</th>
-									        <th width="80" style="text-align:center">Saldo Atual</th>
+									        <th width="90" style="text-align:center">Saldo Atual</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -84,7 +84,7 @@
 										<c:forEach items="${lista}" var="banco">
 											<tr class="odd gradeX">
 												<td>${banco.descricao}</td>
-												<td width="80" style="text-align:center">${banco.saldoAtual}</td>
+												<td width="90" style="text-align:center">${banco.saldoAtual}</td>
 												<td width="50" style="text-align:center">
 													<a href="<c:url value='/banco/edit-${banco.codBanco}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 

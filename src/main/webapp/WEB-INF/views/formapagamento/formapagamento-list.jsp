@@ -77,8 +77,8 @@
 							      		<tr>
 									        <th>Descrição</th>
 									        <th width="70" style="text-align:center">Parcelas</th>
-									        <th width="90" style="text-align:center">1 Parc. dias</th>
-									        <th width="90" style="text-align:center">Demais Parc. dias</th>
+									        <th width="90" style="text-align:center">Dias 1 Parc.</th>
+									        <th width="100" style="text-align:center">Demais Parc.</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -88,7 +88,7 @@
 												<td>${formapagamento.descricao}</td>
 												<td width="70" style="text-align:center">${formapagamento.parcelas}</td>
 												<td width="90" style="text-align:center">${formapagamento.numdias}</td>
-												<td width="90" style="text-align:center">${formapagamento.numdiasDemais}</td>
+												<td width="100" style="text-align:center">${formapagamento.numdiasDemais}</td>
 												<td width="50" style="text-align:center">
 													<a href="<c:url value='/formapagamento/edit-${formapagamento.codFormaPagamento}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 
