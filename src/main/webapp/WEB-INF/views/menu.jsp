@@ -58,22 +58,22 @@
 
                         
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Cadastros<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Cadastro<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
 		                        <li>
-		                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-users fa-fw"></i> Pessoas</a>
+		                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-users fa-fw"></i> Pessoa</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-child fa-fw"></i> Vendedores</a>
+		                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-child fa-fw"></i> Vendedor</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/resGarcon/list'/>"><i class="fa fa-steam fa-fw"></i> Garçon</a>
+		                            <a href="<c:url value='/resGarcon/list'/>"><i class="fa fa-steam fa-fw"></i> Garçom</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/resControle/list'/>"><i class="fa fa-tasks fa-fw"></i> Controle/Mesas</a>
+		                            <a href="<c:url value='/resControle/list'/>"><i class="fa fa-tasks fa-fw"></i> Mesa</a>
 		                        </li>
 		                        <li>
-		                            <a href="#"><i class="fa fa-building fa-fw"></i> Produtos<span class="fa arrow"></span></a>
+		                            <a href="#"><i class="fa fa-building fa-fw"></i> Produto<span class="fa arrow"></span></a>
 		                            <ul class="nav nav-third-level">
 				                        <li>
 				                            <a href="<c:url value='/produtoGrupo/list'/>"><i class="fa fa-columns fa-fw"></i> Grupo</a>
@@ -96,16 +96,16 @@
 		                            </ul>
 			                        </li>
 			                        <li>
-			                            <a href="<c:url value='/moeda/list'/>"><i class="fa fa-dollar fa-fw"></i> Moedas</a>
+			                            <a href="<c:url value='/moeda/list'/>"><i class="fa fa-dollar fa-fw"></i> Moeda</a>
 			                        </li>
 			                        <li>
-			                            <a href="<c:url value='/formapagamento/list'/>"><i class="fa fa-pagelines fa-fw"></i> Formas de Pagamentos</a>
+			                            <a href="<c:url value='/formapagamento/list'/>"><i class="fa fa-pagelines fa-fw"></i> Forma de Pagamento</a>
 			                        </li>
 			                        <li>
-			                            <a href="<c:url value='/banco/list'/>"><i class="fa fa-th-large fa-fw"></i> Contas Bancárias</a>
+			                            <a href="<c:url value='/banco/list'/>"><i class="fa fa-th-large fa-fw"></i> Conta Bancária</a>
 			                        </li>
 			                        <li>
-			                            <a href="<c:url value='/centCusto/list'/>"><i class="fa fa-trophy fa-fw"></i> Centros de Custo</a>
+			                            <a href="<c:url value='/centCusto/list'/>"><i class="fa fa-trophy fa-fw"></i> Centro de Custo</a>
 			                        </li>
 		                            <!-- /.nav-second-level -->
                             </ul>
@@ -113,7 +113,7 @@
                         </li>
                         
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Movimentações<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Movimentação<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
 		                        <li>
 		                            <a href="<c:url value='/contas/list'/>"><i class="fa fa-money fa-fw"></i> Contas</a>
@@ -140,7 +140,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Sistemas<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Sistema<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
 		                        <li>
 		                            <a href="<c:url value='/user/list'/>"><i class="fa fa-user fa-fw"></i> Usuário</a>
@@ -149,7 +149,7 @@
 		                            <a href="<c:url value='/impressao/list'/>"><i class="fa fa-print fa-fw"></i> Impressão</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/parGeral/list'/>"><i class="fa fa-table fa-fw"></i> Parâmetro Geral (Empresa)</a>
+		                            <a href="<c:url value='/parGeral/list'/>"><i class="fa fa-table fa-fw"></i> Parâmetro Geral</a>
 		                        </li>
 		                        <li>
 		                            <a href="<c:url value='/parRestaurante/list'/>"><i class="fa fa-ge fa-fw"></i> Parâmetro Restaurante</a>
