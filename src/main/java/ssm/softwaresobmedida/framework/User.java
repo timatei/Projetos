@@ -1,4 +1,4 @@
-package com.softwaresobmedida.model;
+package ssm.softwaresobmedida.framework;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -48,6 +48,10 @@ public class User implements Serializable{
 	@Column(name="EMAIL", nullable=false)
 	private String email;
 
+	@NotEmpty
+	@Column(name="BANCO_TEMP", nullable=true)
+	private String banco;
+	
 	@NotEmpty
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "SSM_USER_USER_PROFILE", 
@@ -103,6 +107,14 @@ public class User implements Serializable{
 		this.email = email;
 	}
 
+	public String getBanco() {
+		return banco;
+	}
+	
+	public void setBanco(String banco) {
+		this.banco = banco;
+	}
+	
 	public Set<UserProfile> getUserProfiles() {
 		return userProfiles;
 	}
@@ -110,7 +122,7 @@ public class User implements Serializable{
 	public void setUserProfiles(Set<UserProfile> userProfiles) {
 		this.userProfiles = userProfiles;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -148,7 +160,7 @@ public class User implements Serializable{
 	 */
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password
+		return "User [id=" + id + ", ssoId=" + ssoId 
 				+ ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", email=" + email + "]";
 	}

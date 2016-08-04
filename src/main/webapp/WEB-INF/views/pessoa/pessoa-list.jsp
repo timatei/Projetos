@@ -78,7 +78,7 @@
 									        <th>Tipo</th>
 									        <th>Nome</th>
 									        <th>Razão Social</th>
-									        <th>CNPJ/CPF</th>
+									        <th width="120" style="text-align:center">CNPJ/CPF</th>
 									        <th width="50" style="text-align:center"></th>
 										</tr>
                                     </thead>
@@ -88,7 +88,7 @@
 												<td>${pessoa.tipoPessoa}</td>
 												<td>${pessoa.nome}</td>
 												<td>${pessoa.razaoSocial}</td>
-												<td>${pessoa.cpfcnpj}</td>
+												<td width="120" style="text-align:center">${pessoa.cpfcnpj}</td>
 												<td width="50" style="text-align:center">
 													<a href="<c:url value='/pessoa/edit-${pessoa.codPessoa}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>
 												    <a href="#" 

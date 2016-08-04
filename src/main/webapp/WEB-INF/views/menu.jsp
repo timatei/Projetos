@@ -28,7 +28,7 @@
 							<div class="profile-info row">
 					            <div class="profile-image col-xs-4">
 					                <a href="ui-profile.html">
-					                    <img alt="" src="http://jaybabani.com/complete-admin/v2.0/preview/data/profile/profile-ecommerce.jpg" class="img-responsive img-circle">
+					                    <img alt="" src="../img/profile.png" class="img-responsive img-circle">
 					                </a>
 					            </div>
 					            <div class="profile-details col-xs-8">

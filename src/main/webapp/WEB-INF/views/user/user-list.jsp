@@ -81,6 +81,7 @@
 									        <th>Sobrenome</th>
 									        <th>Email</th>
 									        <th>Login</th>
+									        <th>Database</th>
 									        <sec:authorize access="hasRole('ADMIN') or hasRole('DBA')">
 									        	<th width="50" style="text-align:center"></th>
 									        </sec:authorize>
@@ -93,6 +94,7 @@
 												<td>${user.lastName}</td>
 												<td>${user.email}</td>
 												<td>${user.ssoId}</td>
+												<td>${user.banco}</td>
 												<td width="50" style="text-align:center">
 												    <sec:authorize access="hasRole('ADMIN') or hasRole('DBA')">
 														<a href="<c:url value='/user/edit-user-${user.ssoId}' />" class="btn btn-success btn-circle"><i class="fa fa-edit"></i></a>

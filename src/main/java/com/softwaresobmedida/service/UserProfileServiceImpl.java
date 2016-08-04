@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.softwaresobmedida.dao.UserProfileDao;
-import com.softwaresobmedida.model.UserProfile;
 
+import ssm.softwaresobmedida.framework.UserProfile;
 
 @Service("userProfileService")
-@Transactional
+@Transactional(transactionManager="transactionManagerTeste")
 public class UserProfileServiceImpl implements UserProfileService{
 	
 	@Autowired

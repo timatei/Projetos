@@ -107,6 +107,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inline-suggestions">Database:</label>
+									<div class="col-sm-8">
+	                                    <form:input type="text" path="banco" id="banco" class="form-control" />
+	                                    <div class="has-error">
+	                                        <form:errors path="banco" class="label label-danger"/>
+	                                    </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-sm-2 control-label" for="inline-suggestions">Acessos:</label>
                                     <div class="col-sm-8">
 	                                    <form:select path="userProfiles" items="${roles}" multiple="true" itemValue="id" itemLabel="type" class="form-control" />

@@ -1,4 +1,4 @@
-package com.softwaresobmedida.model;
+package ssm.softwaresobmedida.framework;
 
 import java.io.Serializable;
 import java.util.Date;

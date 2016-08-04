@@ -1,7 +1,6 @@
 package com.softwaresobmedida.dao;
 
 import java.io.Serializable;
-
 import java.lang.reflect.ParameterizedType;
 
 import org.hibernate.Criteria;
@@ -20,9 +19,13 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
+	
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
 
-	protected Session getSession(){
-		return sessionFactory.getCurrentSession();
+	public Session getSession(){
+		return getSessionFactory().getCurrentSession();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -45,5 +48,4 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 	protected Criteria createEntityCriteria(){
 		return getSession().createCriteria(persistentClass);
 	}
-
 }

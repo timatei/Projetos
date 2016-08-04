@@ -1,4 +1,4 @@
-package com.softwaresobmedida.configuration;
+package com.softwaresobmedida.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -17,17 +17,14 @@ import org.springframework.web.servlet.view.JstlView;
 
 import com.softwaresobmedida.converter.RoleToUserProfileConverter;
 
-
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.softwaresobmedida")
-public class AppConfig extends WebMvcConfigurerAdapter{
-	
+public class AppConfiguration extends WebMvcConfigurerAdapter{
 	
 	@Autowired
 	RoleToUserProfileConverter roleToUserProfileConverter;
 	
-
 	/**
      * Configure ViewResolvers to deliver preferred views.
      */
@@ -58,7 +55,6 @@ public class AppConfig extends WebMvcConfigurerAdapter{
         registry.addConverter(roleToUserProfileConverter);
     }
 	
-
     /**
      * Configure MessageSource to lookup any validation/error message in internationalized property files
      */
@@ -77,5 +73,10 @@ public class AppConfig extends WebMvcConfigurerAdapter{
     public void configurePathMatch(PathMatchConfigurer matcher) {
         matcher.setUseRegisteredSuffixPatternMatch(true);
     }
+    
+	//@Override
+	//public void addInterceptors(InterceptorRegistry registry) {
+		//registry.addInterceptor(new SSMHandlerInterceptorAdapter());
+		//System.out.println(registry.toString());
+	//}
 }
-

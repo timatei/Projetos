@@ -2,7 +2,7 @@ package com.softwaresobmedida.dao;
 
 import java.util.List;
 
-import com.softwaresobmedida.model.UserProfile;
+import ssm.softwaresobmedida.framework.UserProfile;
 
 
 public interface UserProfileDao {

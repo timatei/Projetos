@@ -3,24 +3,46 @@ package com.softwaresobmedida.dao;
 import java.util.Date;
 
 import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.web.authentication.rememberme.PersistentRememberMeToken;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.softwaresobmedida.dao.AbstractDao;
-import com.softwaresobmedida.model.PersistentLogin;
+import ssm.softwaresobmedida.framework.PersistentLogin;
 
 @Repository("tokenRepositoryDao")
-@Transactional
-public class HibernateTokenRepositoryImpl extends AbstractDao<String, PersistentLogin>
-		implements PersistentTokenRepository {
+@Transactional(transactionManager="transactionManagerTeste")
+public class HibernateTokenRepositoryImpl implements PersistentTokenRepository {
 
 	static final Logger logger = LoggerFactory.getLogger(HibernateTokenRepositoryImpl.class);
 
+	public PersistentLogin getByKey(String key) {
+		return (PersistentLogin) getSession().get(PersistentLogin.class, key);
+	}
+
+	public void persist(PersistentLogin entity) {
+		getSession().persist(entity);
+	}
+
+	public void persistUpdate(PersistentLogin entity) {
+		getSession().update(entity);
+	}
+
+	public void delete(PersistentLogin entity) {
+		getSession().delete(entity);
+	}
+	
+	protected Criteria createEntityCriteria(){
+		return getSession().createCriteria(PersistentLogin.class);
+	}
+	
 	@Override
 	public void createNewToken(PersistentRememberMeToken token) {
 		logger.info("Creating Token for user : {}", token.getUsername());
@@ -71,6 +93,17 @@ public class HibernateTokenRepositoryImpl extends AbstractDao<String, Persistent
 		persistUpdate(persistentLogin);
 	}
 
+	@Autowired
+	@Qualifier("sessionFactoryTeste")
+	private SessionFactory sessionFactoryTeste;
+	
+	public SessionFactory getSessionFactory() {
+		return sessionFactoryTeste;
+	}
+	
+	public Session getSession() {
+		return getSessionFactory().getCurrentSession();//.withOptions().tenantIdentifier("MASTER").openSession();
+	}
 }
 
 /*

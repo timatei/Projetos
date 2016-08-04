@@ -4,18 +4,49 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Hibernate;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.softwaresobmedida.model.User;
+import ssm.softwaresobmedida.framework.User;
 
 @Repository("userDao")
-public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
+@Transactional(transactionManager="transactionManagerTeste")
+public class UserDaoImpl implements UserDao {
 
 	static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
+
+	public User getByKey(Integer key) {
+		return (User) getSession().get(User.class, key);
+	}
+
+	public void persist(User entity) {
+		try {
+			getSession().saveOrUpdate(entity);
+		} finally {
+			getSession().flush();
+		}
+		System.out.println("Id Gerado = " + entity.getId());
+	}
+
+	public void persistUpdate(User entity) {
+		getSession().update(entity);
+	}
+
+	public void delete(User entity) {
+		getSession().delete(entity);
+	}
+	
+	protected Criteria createEntityCriteria(){
+		return getSession().createCriteria(User.class);
+	}
 	
 	public User findById(int id) {
 		User user = getByKey(id);
@@ -60,5 +91,17 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
 		crit.add(Restrictions.eq("ssoId", sso));
 		User user = (User)crit.uniqueResult();
 		delete(user);
+	}
+
+	@Autowired
+	@Qualifier("sessionFactoryTeste")
+	private SessionFactory sessionFactoryTeste;
+	
+	public SessionFactory getSessionFactory() {
+		return sessionFactoryTeste;
+	}
+	
+	public Session getSession() {
+		return getSessionFactory().getCurrentSession();//.withOptions().tenantIdentifier("MASTER").openSession();
 	}
 }

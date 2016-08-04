@@ -2,7 +2,7 @@ package com.softwaresobmedida.dao;
 
 import java.util.List;
 
-import com.softwaresobmedida.model.User;
+import ssm.softwaresobmedida.framework.User;
 
 public interface UserDao {
 

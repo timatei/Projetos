@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.softwaresobmedida.dao.UserDao;
-import com.softwaresobmedida.model.User;
+
+import ssm.softwaresobmedida.framework.User;
 
 @Service("userService")
-@Transactional
+@Transactional(transactionManager="transactionManagerTeste")
 public class UserServiceImpl implements UserService{
 
 	@Autowired
@@ -50,6 +51,7 @@ public class UserServiceImpl implements UserService{
 			entity.setLastName(user.getLastName());
 			entity.setEmail(user.getEmail());
 			entity.setUserProfiles(user.getUserProfiles());
+			entity.setBanco(user.getBanco());
 		}
 	}
 

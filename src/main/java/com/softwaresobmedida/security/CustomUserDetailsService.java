@@ -14,12 +14,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.softwaresobmedida.model.User;
-import com.softwaresobmedida.model.UserProfile;
 import com.softwaresobmedida.service.UserService;
 
+import ssm.softwaresobmedida.framework.User;
+import ssm.softwaresobmedida.framework.UserProfile;
 
 @Service("customUserDetailsService")
+@Transactional(transactionManager="transactionManagerTeste")
 public class CustomUserDetailsService implements UserDetailsService{
 
 	static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
@@ -27,7 +28,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 	@Autowired
 	private UserService userService;
 	
-	@Transactional(readOnly=true)
+	@Transactional(transactionManager="transactionManagerTeste", readOnly=true)
 	public UserDetails loadUserByUsername(String ssoId)
 			throws UsernameNotFoundException {
 		User user = userService.findBySSO(ssoId);
@@ -36,8 +37,10 @@ public class CustomUserDetailsService implements UserDetailsService{
 			logger.info("User not found");
 			throw new UsernameNotFoundException("Username not found");
 		}
-			return new org.springframework.security.core.userdetails.User(user.getSsoId(), user.getPassword(), 
-				 true, true, true, true, getGrantedAuthorities(user));
+		return new UserDetailsModify(user.getSsoId(), user.getPassword(), getGrantedAuthorities(user), user.getBanco());
+		//alteração de tenant
+		//return new org.springframework.security.core.userdetails.User(user.getSsoId(), user.getPassword(), 
+		//true, true, true, true, );
 	}
 
 	

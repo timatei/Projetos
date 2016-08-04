@@ -18,11 +18,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.softwaresobmedida.model.User;
-import com.softwaresobmedida.model.UserProfile;
 import com.softwaresobmedida.security.UtilSecurity;
 import com.softwaresobmedida.service.UserProfileService;
 import com.softwaresobmedida.service.UserService;
+
+import ssm.softwaresobmedida.framework.User;
+import ssm.softwaresobmedida.framework.UserProfile;
 
 @Controller
 @RequestMapping("/user")

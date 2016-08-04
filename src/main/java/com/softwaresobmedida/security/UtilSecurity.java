@@ -21,6 +21,24 @@ public class UtilSecurity {
 		return userName;
 	}
 	
+
+	public static String getBancoAtual(){
+		String banco = "MASTER";
+		
+		if ((SecurityContextHolder.getContext() != null) && (SecurityContextHolder.getContext().getAuthentication() != null)) {
+			Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+	
+			if (principal != null) {
+				if (principal instanceof UserDetailsModify) {
+					banco = ((UserDetailsModify)principal).getDataBaseName();
+				}
+			}
+		}
+		
+		return banco;
+	}
+	
+	
 	/**
 	 * This method returns true if users is already authenticated [logged-in], else false.
 	 */
