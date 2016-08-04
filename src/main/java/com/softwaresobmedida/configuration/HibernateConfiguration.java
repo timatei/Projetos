@@ -11,16 +11,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider;
-import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
 
 @Configuration
 @EnableTransactionManagement
@@ -31,6 +27,9 @@ public class HibernateConfiguration {
     @Autowired
     private Environment environment;
 
+    /* 
+     * MULTI TENANT
+     * 
 	@Autowired
 	private MultiTenantConnectionProvider multiTenantConnectionProvider;
 
@@ -57,20 +56,21 @@ public class HibernateConfiguration {
        txManager.setSessionFactory(s);
        return txManager;
     }	
+    */
     
-    @Bean(name="sessionFactoryTeste")
-    public LocalSessionFactoryBean sessionFactoryTeste() {
+    @Bean(name="sessionFactoryMaster")
+    public LocalSessionFactoryBean sessionFactoryMaster() {
     	LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSourceMaster());
-        sessionFactory.setPackagesToScan(new String[] { "ssm.softwaresobmedida.framework" });
+        sessionFactory.setPackagesToScan(new String[] { "com.softwaresobmedida.model", "ssm.softwaresobmedida.framework" });
         sessionFactory.setHibernateProperties(hibernateProperties(false));
         return sessionFactory;
     }
     
-    @Bean(name="transactionManagerTeste")
+    @Bean(name="transactionManagerMaster")
     @Autowired
-    @Qualifier("sessionFactoryTeste")
-    public HibernateTransactionManager transactionManagerTeste(SessionFactory s) {
+    @Qualifier("sessionFactoryMaster")
+    public HibernateTransactionManager transactionManagerMaster(SessionFactory s) {
        HibernateTransactionManager txManager = new HibernateTransactionManager();
        txManager.setSessionFactory(s);
        return txManager;
@@ -84,11 +84,9 @@ public class HibernateConfiguration {
         properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
         if (tenant) {
 	        properties.put(org.hibernate.cfg.Environment.MULTI_TENANT, MultiTenancyStrategy.DATABASE);
-	        properties.put(org.hibernate.cfg.Environment.MULTI_TENANT_CONNECTION_PROVIDER, multiTenantConnectionProvider);
-	        properties.put(org.hibernate.cfg.Environment.MULTI_TENANT_IDENTIFIER_RESOLVER, currentTenantIdentifierResolver);
+	        //properties.put(org.hibernate.cfg.Environment.MULTI_TENANT_CONNECTION_PROVIDER, multiTenantConnectionProvider);
+	        //properties.put(org.hibernate.cfg.Environment.MULTI_TENANT_IDENTIFIER_RESOLVER, currentTenantIdentifierResolver);
         }
-        //properties.put("hibernate.connection.lc_ctype", "WIN1252");
-        //properties.put("hibernate.connection.charSet", "WIN1252");
         return properties;
     }
     	
@@ -101,7 +99,8 @@ public class HibernateConfiguration {
         dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
         return dataSource;
 	}
-    
+
+	/*
 	@Bean(name = "dataSource1") //@Bean(name = {"dataSource", "dataSource1"})
 	public DataSource dataSource1() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -121,4 +120,5 @@ public class HibernateConfiguration {
         dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
         return dataSource;
 	}	
+	*/
 }

@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ssm.softwaresobmedida.framework.User;
 
 @Repository("userDao")
-@Transactional(transactionManager="transactionManagerTeste")
+@Transactional(transactionManager="transactionManagerMaster")
 public class UserDaoImpl implements UserDao {
 
 	static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
@@ -94,11 +94,11 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Autowired
-	@Qualifier("sessionFactoryTeste")
-	private SessionFactory sessionFactoryTeste;
+	@Qualifier("sessionFactoryMaster")
+	private SessionFactory sessionFactoryMaster;
 	
 	public SessionFactory getSessionFactory() {
-		return sessionFactoryTeste;
+		return sessionFactoryMaster;
 	}
 	
 	public Session getSession() {

@@ -20,7 +20,7 @@ import ssm.softwaresobmedida.framework.User;
 import ssm.softwaresobmedida.framework.UserProfile;
 
 @Service("customUserDetailsService")
-@Transactional(transactionManager="transactionManagerTeste")
+@Transactional(transactionManager="transactionManagerMaster")
 public class CustomUserDetailsService implements UserDetailsService{
 
 	static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
@@ -28,7 +28,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 	@Autowired
 	private UserService userService;
 	
-	@Transactional(transactionManager="transactionManagerTeste", readOnly=true)
+	@Transactional(transactionManager="transactionManagerMaster", readOnly=true)
 	public UserDetails loadUserByUsername(String ssoId)
 			throws UsernameNotFoundException {
 		User user = userService.findBySSO(ssoId);

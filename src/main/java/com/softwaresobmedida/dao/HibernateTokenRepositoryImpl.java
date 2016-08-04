@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ssm.softwaresobmedida.framework.PersistentLogin;
 
 @Repository("tokenRepositoryDao")
-@Transactional(transactionManager="transactionManagerTeste")
+@Transactional(transactionManager="transactionManagerMaster")
 public class HibernateTokenRepositoryImpl implements PersistentTokenRepository {
 
 	static final Logger logger = LoggerFactory.getLogger(HibernateTokenRepositoryImpl.class);
@@ -94,11 +94,11 @@ public class HibernateTokenRepositoryImpl implements PersistentTokenRepository {
 	}
 
 	@Autowired
-	@Qualifier("sessionFactoryTeste")
-	private SessionFactory sessionFactoryTeste;
+	@Qualifier("sessionFactoryMaster")
+	private SessionFactory sessionFactoryMaster;
 	
 	public SessionFactory getSessionFactory() {
-		return sessionFactoryTeste;
+		return sessionFactoryMaster;
 	}
 	
 	public Session getSession() {

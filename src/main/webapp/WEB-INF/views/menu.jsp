@@ -27,13 +27,13 @@
                       	<li>
 							<div class="profile-info row">
 					            <div class="profile-image col-xs-4">
-					                <a href="ui-profile.html">
-					                    <img alt="" src="../img/profile.png" class="img-responsive img-circle">
+					                <a href="<c:url value='/index'/>">
+					                    <img alt="" src="<c:url value='/static/img/profile.jpg'/>" class="img-responsive img-circle">
 					                </a>
 					            </div>
 					            <div class="profile-details col-xs-8">
 					                <h3>
-					                    <a href="ui-profile.html">${loggedinuser}</a>
+					                    <a href="<c:url value='/index'/>">${loggedinuser}</a>
 					
 					                    <!-- Available statuses: online, idle, busy, away and offline -->
 					                    <span class="profile-status online"></span>

@@ -11,7 +11,7 @@ import com.softwaresobmedida.dao.UserProfileDao;
 import ssm.softwaresobmedida.framework.UserProfile;
 
 @Service("userProfileService")
-@Transactional(transactionManager="transactionManagerTeste")
+@Transactional(transactionManager="transactionManagerMaster")
 public class UserProfileServiceImpl implements UserProfileService{
 	
 	@Autowired

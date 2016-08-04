@@ -12,7 +12,7 @@ import com.softwaresobmedida.dao.UserDao;
 import ssm.softwaresobmedida.framework.User;
 
 @Service("userService")
-@Transactional(transactionManager="transactionManagerTeste")
+@Transactional(transactionManager="transactionManagerMaster")
 public class UserServiceImpl implements UserService{
 
 	@Autowired
