@@ -1,5 +1,5 @@
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="page-topbar navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Menu</span>
@@ -41,7 +41,7 @@
 					                <sec:authorize access="hasRole('USER')">
 					                	<p class="profile-title">Usuário</p>
 					                </sec:authorize>
-					                <sec:authorize access="hasRole('ADMIN')">
+					                <sec:authorize access="!hasRole('USER') and hasRole('ADMIN')">
 					                	<p class="profile-title">Administrador</p>
 					                </sec:authorize>
 					                <sec:authorize access="hasRole('DBA')">
@@ -51,27 +51,15 @@
 					            </div>
 					        </div>
 				        </li>
+				        
                         <li>
-                            <a href="<c:url value='/index'/>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="<c:url value='/index'/>"><i class="fa fa-dashboard fa-fw"></i> Visão Geral</a>
                         </li>
-                        
 
                         
                         <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Cadastro<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-		                        <li>
-		                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-users fa-fw"></i> Pessoa</a>
-		                        </li>
-		                        <li>
-		                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-child fa-fw"></i> Vendedor</a>
-		                        </li>
-		                        <li>
-		                            <a href="<c:url value='/resGarcom/list'/>"><i class="fa fa-steam fa-fw"></i> Garçom</a>
-		                        </li>
-		                        <li>
-		                            <a href="<c:url value='/resControle/list'/>"><i class="fa fa-tasks fa-fw"></i> Mesa</a>
-		                        </li>
 		                        <li>
 		                            <a href="#"><i class="fa fa-building fa-fw"></i> Produto<span class="fa arrow"></span></a>
 		                            <ul class="nav nav-third-level">
@@ -96,45 +84,85 @@
 		                            </ul>
 			                        </li>
 			                        <li>
+			                            <a href="<c:url value='/vendedor/list'/>"><i class="fa fa-child fa-fw"></i> Vendedor</a>
+			                        </li>
+			                        <li>
 			                            <a href="<c:url value='/moeda/list'/>"><i class="fa fa-dollar fa-fw"></i> Moeda</a>
 			                        </li>
 			                        <li>
 			                            <a href="<c:url value='/formapagamento/list'/>"><i class="fa fa-pagelines fa-fw"></i> Forma de pagamento</a>
 			                        </li>
-			                        <li>
-			                            <a href="<c:url value='/banco/list'/>"><i class="fa fa-th-large fa-fw"></i> Conta bancária</a>
-			                        </li>
-			                        <li>
-			                            <a href="<c:url value='/centCusto/list'/>"><i class="fa fa-trophy fa-fw"></i> Centro de custo</a>
-			                        </li>
 		                            <!-- /.nav-second-level -->
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-shopping-cart fa-fw"></i> Vendas<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+		                        <li>
+		                            <a href="<c:url value='/pedVenda/list'/>"><i class="fa fa-inbox fa-fw"></i> Venda Rápida</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-users fa-fw"></i> Clientes</a>
+		                        </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Movimentação<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-cubes fa-fw"></i> Compras<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
 		                        <li>
-		                            <a href="<c:url value='/contas/list'/>"><i class="fa fa-money fa-fw"></i> Contas</a>
+		                            <a href="<c:url value='/nfCompra/list'/>"><i class="fa fa-book fa-fw"></i> Notas de Compras</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/pedVenda/list'/>"><i class="fa fa-inbox fa-fw"></i> Venda Rápida</a>
+		                            <a href="<c:url value='/ajusteEstoque/list'/>"><i class="fa fa-tag fa-fw"></i> Ajuste de Estoque</a>
 		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/pessoa/list'/>"><i class="fa fa-users fa-fw"></i> Fornecedores</a>
+		                        </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+
+                        <li>
+                            <a href="#"><i class="fa fa-dollar fa-fw"></i> Financeiro<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+		                        <li>
+		                            <a href="<c:url value='/contas/list'/>"><i class="fa fa-money fa-fw"></i> Contas a Pagar</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/contas/list'/>"><i class="fa fa-money fa-fw"></i> Contas a Receber</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/banco/list'/>"><i class="fa fa-th-large fa-fw"></i> Contas bancárias</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/centCusto/list'/>"><i class="fa fa-trophy fa-fw"></i> Categorias</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/caixaAbertura/list'/>"><i class="fa fa-compass fa-fw"></i> Abertura de Caixa</a>
+		                        </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Restaurante<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
 		                        <li>
 		                            <a href="<c:url value='/resPedido/list'/>"><i class="fa fa-list-alt fa-fw"></i> Lançamento de Mesa</a>
 		                        </li>
 		                        <li>
-		                            <a href="#"><i class="fa fa-tags fa-fw"></i> Compra<span class="fa arrow"></span></a>
-		                            <ul class="nav nav-third-level">
-				                        <li>
-				                            <a href="<c:url value='/ajusteEstoque/list'/>"><i class="fa fa-tag fa-fw"></i> Ajuste de Estoque</a>
-				                        </li>
-				                        <li>
-				                            <a href="<c:url value='/nfCompra/list'/>"><i class="fa fa-book fa-fw"></i> Nota Fiscal de Compra</a>
-				                        </li>
-		                            </ul>
-		                            <!-- /.nav-second-level -->
+		                            <a href="<c:url value='/resGarcom/list'/>"><i class="fa fa-steam fa-fw"></i> Garçom</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/resControle/list'/>"><i class="fa fa-tasks fa-fw"></i> Mesa</a>
+		                        </li>
+		                        <li>
+		                            <a href="<c:url value='/parRestaurante/list'/>"><i class="fa fa-ge fa-fw"></i> Parâmetro Restaurante</a>
 		                        </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -152,9 +180,6 @@
 		                            <a href="<c:url value='/parGeral/list'/>"><i class="fa fa-table fa-fw"></i> Parâmetro Geral</a>
 		                        </li>
 		                        <li>
-		                            <a href="<c:url value='/parRestaurante/list'/>"><i class="fa fa-ge fa-fw"></i> Parâmetro Restaurante</a>
-		                        </li>
-		                        <li>
 		                            <a href="<c:url value='/parVenda/list'/>"><i class="fa fa-legal fa-fw"></i> Parametro de Venda</a>
 		                        </li>
 		                        <li>
@@ -162,9 +187,6 @@
 		                        </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="<c:url value='/caixaAbertura/list'/>"><i class="fa fa-compass fa-fw"></i> Abertura de Caixa</a>
                         </li>
                     </ul>
                 </div>
