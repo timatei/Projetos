@@ -49,22 +49,6 @@ public class AppController {
 	    }
 	}
 
-	@RequestMapping(value = "/teste", method = RequestMethod.GET)
-	public String testePage() {
-		return "teste";		
-	}
-
-	@RequestMapping(value = "/teste-menu", method = RequestMethod.GET)
-	public String testeMenuPage() {
-		return "teste-menu";		
-	}
-
-	@RequestMapping(value = "/teste-head", method = RequestMethod.GET)
-	public String testeHeadPage() {
-		return "teste-head";		
-	}
-
-	
 	@RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
 	public String indexPage(
 			final ModelMap model) 
