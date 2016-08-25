@@ -1,3 +1,4 @@
 activeuserprofiles=SSM-Supervisor;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=Leandro
+useridperkey=SSM-Supervisor.Local\=Leandro;
